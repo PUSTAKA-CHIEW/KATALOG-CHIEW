@@ -325,6 +325,14 @@
    },
    "d": "SAIZ A4 (210MM X 297MM)\n80GSM\n450 HELAI/RIM\n5 RIM/KOTAK",
    "de": "A4 SIZE ( 210MM X 297MM )\n80GSM\n450 SHEETS/REAM\n5 REAMS/BOX"
+  },
+  "02-07": {
+   "n": "A4 Colour Paper (Mix Dark)",
+   "o": [
+    "Rim"
+   ],
+   "at": 1795598352168,
+   "hidden": true
   }
  },
  "newitems": {
