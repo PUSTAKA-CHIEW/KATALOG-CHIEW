@@ -306,12 +306,16 @@
     "Oren",
     "Merah",
     "Pink",
-    "Hitam"
+    "Hitam",
+    "Mix"
    ],
-   "at": 1795597537068,
+   "at": 1795597554386,
    "gal": [
     "31f668b27d239822061a6fe13811db9c"
-   ]
+   ],
+   "oimg": {
+    "Mix": "9ce9e798f79259d812f9696c8a0a69fb"
+   }
   }
  },
  "newitems": {
