@@ -141,6 +141,7 @@ html,body{overflow-x:hidden}
 .ed input[type=text]{font:inherit;font-size:14px;padding:7px 9px;border:1px solid var(--line);border-radius:4px;width:100%;color:var(--ink);background:var(--field)}
 .ed textarea{font:inherit;font-size:14px;line-height:1.5;padding:8px 9px;border:1px solid var(--line);border-radius:4px;width:100%;color:var(--ink);background:var(--field);resize:vertical}.ed textarea:focus{border-color:var(--red);outline:none}
 .ed .tr{align-self:flex-start;font-size:13px}.trmsg{font-size:12.5px;color:var(--muted)}
+.brand{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.pd .brand{font-size:13px}
 .desc{white-space:pre-line;font-size:15px;line-height:1.65;color:var(--ink);opacity:.9;max-width:62ch}
 .ed input[type=text]:focus{border-color:var(--red);outline:none}
 .ed .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
@@ -578,7 +579,9 @@ document.addEventListener('error',e=>{const im=e.target;if(im.tagName==='IMG'&&i
 const ITEMS={"02-01":{"n":"A4 IK Yellow 70gsm 450s","o":["Rim/Box"]},"02-02":{"n":"A4 IK Yellow 80gsm","o":["Rim/Box"]}}; // nama/spesifikasi tetap yang dibakar ke halaman
 const nameMs=it=>(liveItems[it.k]&&liveItems[it.k].n)||(ITEMS[it.k]&&ITEMS[it.k].n)||it.n;
 const nameEn=it=>{const lv=liveItems[it.k];if(lv&&lv.ne)return lv.ne;if(lv&&lv.n&&lv.n!==it.n)return '';return (ITEMS[it.k]&&ITEMS[it.k].ne)||it.ne||'';};
+const brandOf=it=>((liveItems[it.k]||{}).br)||'';
 const descOf=it=>{const lv=liveItems[it.k]||{};return LANG==='en'?(lv.de||lv.d||''):(lv.d||lv.de||'');};
+const fullName=it=>{const b=brandOf(it),n=nameOf(it);return b&&!n.toLowerCase().startsWith(b.toLowerCase())?b+' '+n:n;};
 const nameOf=it=>(LANG==='en'&&nameEn(it))||nameMs(it);
 const fld=(it,f)=>(liveItems[it.k]&&liveItems[it.k][f])||(ITEMS[it.k]&&ITEMS[it.k][f])||'';
 const bcOf=it=>fld(it,'bc'), skuOf=it=>bcOf(it)||fld(it,'sku')||it.k;
@@ -612,7 +615,7 @@ const T={
   siteTitle:'Katalog Pustaka Chiew',toLight:'Tukar ke mod cerah',toDark:'Tukar ke mod gelap',lightMode:'Mod cerah',darkMode:'Mod gelap',openCart:n=>`Buka troli (${n} barang)`,added:n=>`${n} ditambah ke troli.`,viewCart:'Lihat troli',
   cartEmpty1:'Troli anda masih kosong.',cartEmpty2:'Tekan “Tambah ke troli” pada barang yang diperlukan.',qtyOf:n=>`Kuantiti ${n}`,school:'Nama sekolah / syarikat',yourName:'Nama anda',tel:'No. telefon',optional:'(pilihan)',orderNote:'Catatan',orderNoteHint:'(pilihan, cth. tarikh diperlukan)',kinds:n=>`${n} jenis barang`,units:n=>`${n} unit`,
   send:'Hantar pesanan melalui WhatsApp',copy:'Salin senarai pesanan',clear:'Kosongkan troli',copied:'Disalin',copyFail:'Tidak dapat menyalin',needName:'Sila isi nama sekolah dan nama anda dahulu.',allCats:'Semua kategori',
-  ghE401:'Kunci tamat tempoh atau salah. Log masuk semula di #admin.',ghE403:'Kunci tiada kebenaran tulis (Contents: Read and write) atau belum diluluskan oleh organisasi.',trToEn:'Terjemah ke English ↓',trToMs:'Terjemah ke BM ↑',trEmpty:'Tulis penerangan dahulu.',trConfirm:'Sudah ada teks. Tekan sekali lagi untuk menggantikan.',trWait:'Menterjemah…',trDone:'Siap. Sila semak sebelum Simpan.',trFail:'Terjemahan gagal. Cuba lagi.',descMs:'Penerangan (BM)',descEn:'Penerangan (English)',descHint:'Contoh: saiz, bahan, bilangan sehelai/kotak…',adminTitle:'Log masuk penjual',adminHelp:'Hanya untuk pekerja Pustaka Chiew. Tampal kunci GitHub (token) untuk mengedit katalog. Kunci disimpan dalam peranti ini sahaja.',adminKey:'Kunci GitHub',adminLogin:'Log masuk',adminChecking:'Menyemak…',adminBad:'Kunci tidak sah atau tiada kebenaran tulis.',adminOn:'Anda sudah log masuk. Perubahan disimpan terus ke laman web (dipaparkan kepada pelanggan dalam ~1 minit).',adminLogout:'Log keluar',saving:'Menyimpan…',editPhotos:'Edit',closeEdit:'Tutup edit',errBig:'Fail terlalu besar.',errUp:'Gagal memuat naik. Cuba lagi.',errEmpty:'Nama tidak boleh kosong.',errSave:'Gagal menyimpan. Cuba lagi.',errDel:'Gagal membuang gambar.',up:'Naik',moreImgs:'Gambar tambahan (maks. 12)',addImgs:'Tambah gambar',nameEn:'Nama barang (English)',nOpts:n=>`${n} pilihan`,codeBc:'Kod / Barcode',varTitle:'Pilihan · kod · gambar',varName:'Pilihan',varPhoto:'Gambar pilihan',varAdd:'+ Tambah pilihan',addNew:'+ Tambah barang baru',addBtn:'Tambah',addHint:'Selepas ditambah, muat naik gambar pada kad barang itu.',hideItem:'Sembunyikan',showItem:'Tunjukkan',hiddenTag:'Tersembunyi',delItem:'Padam barang',delConfirm:'Tekan lagi untuk padam',zoomOpen:'Besarkan gambar',photos:'Gambar produk',allPhoto:'Semua',pickOpt:'Sila pilih satu pilihan dahulu.',down:'Turun',moveTo:'Kategori',catNameMs:'Nama kategori (BM)',catNameEn:'Nama kategori (English)',saveName:'Simpan nama',resetLayout:'Kembali susunan asal',layoutHint:'Guna ↑ ↓ dan pilihan kategori pada setiap barang untuk susun semula.',
+  ghE401:'Kunci tamat tempoh atau salah. Log masuk semula di #admin.',ghE403:'Kunci tiada kebenaran tulis (Contents: Read and write) atau belum diluluskan oleh organisasi.',brandLbl:'Jenama (tidak diterjemah)',brandHint:'cth. COLOP, Lucky Star',trToEn:'Terjemah ke English',trToMs:'Terjemah ke BM',trEmpty:'Tulis penerangan dahulu.',trConfirm:'Sudah ada teks. Tekan sekali lagi untuk menggantikan.',trWait:'Menterjemah…',trDone:'Siap. Sila semak sebelum Simpan.',trFail:'Terjemahan gagal. Cuba lagi.',descMs:'Penerangan (BM)',descEn:'Penerangan (English)',descHint:'Contoh: saiz, bahan, bilangan sehelai/kotak…',adminTitle:'Log masuk penjual',adminHelp:'Hanya untuk pekerja Pustaka Chiew. Tampal kunci GitHub (token) untuk mengedit katalog. Kunci disimpan dalam peranti ini sahaja.',adminKey:'Kunci GitHub',adminLogin:'Log masuk',adminChecking:'Menyemak…',adminBad:'Kunci tidak sah atau tiada kebenaran tulis.',adminOn:'Anda sudah log masuk. Perubahan disimpan terus ke laman web (dipaparkan kepada pelanggan dalam ~1 minit).',adminLogout:'Log keluar',saving:'Menyimpan…',editPhotos:'Edit',closeEdit:'Tutup edit',errBig:'Fail terlalu besar.',errUp:'Gagal memuat naik. Cuba lagi.',errEmpty:'Nama tidak boleh kosong.',errSave:'Gagal menyimpan. Cuba lagi.',errDel:'Gagal membuang gambar.',up:'Naik',moreImgs:'Gambar tambahan (maks. 12)',addImgs:'Tambah gambar',nameEn:'Nama barang (English)',nOpts:n=>`${n} pilihan`,codeBc:'Kod / Barcode',varTitle:'Pilihan · kod · gambar',varName:'Pilihan',varPhoto:'Gambar pilihan',varAdd:'+ Tambah pilihan',addNew:'+ Tambah barang baru',addBtn:'Tambah',addHint:'Selepas ditambah, muat naik gambar pada kad barang itu.',hideItem:'Sembunyikan',showItem:'Tunjukkan',hiddenTag:'Tersembunyi',delItem:'Padam barang',delConfirm:'Tekan lagi untuk padam',zoomOpen:'Besarkan gambar',photos:'Gambar produk',allPhoto:'Semua',pickOpt:'Sila pilih satu pilihan dahulu.',down:'Turun',moveTo:'Kategori',catNameMs:'Nama kategori (BM)',catNameEn:'Nama kategori (English)',saveName:'Simpan nama',resetLayout:'Kembali susunan asal',layoutHint:'Guna ↑ ↓ dan pilihan kategori pada setiap barang untuk susun semula.',
   oTitle:'*PESANAN – Katalog Pustaka Chiew*',oSchool:'Sekolah',oName:'Nama',oTel:'Tel',oTotal:(a,b)=>`Jumlah: ${a} jenis barang, ${b} unit`,oNote:'Catatan',
   st_menu:'Buka menu kategori',st_tag:'Pembekal Bekalan Sekolah &amp; Pejabat',st_cats:'Kategori',st_drawer:'Menu kategori',st_closeMenu:'Tutup menu',st_cart:'Troli pesanan',st_closeCart:'Tutup troli',st_editbar:'<b>Mod edit.</b> Muat naik gambar, tukar nama, atau susun semula barang dan kategori.',st_done:'Selesai',st_addr:'Alamat',st_email:'Emel',st_scan:'Imbas untuk WhatsApp',st_qr:'Kod QR WhatsApp Pustaka Chiew',langBtn:'EN',langAria:'Switch to English',tagBARU:'BARU'},
  en:{code:'Code',chooseAdd:'Select &amp; add',addMini:'+ Add to cart',uploading:'Uploading…',changePhoto:'Change photo',uploadPhoto:'Upload photo',remove:'Remove',itemName:'Item name',optsComma:'Options (separate with commas)',save:'Save',restore:'Restore original',savedOk:'Saved',
@@ -622,7 +625,7 @@ const T={
   siteTitle:'Pustaka Chiew Catalogue',toLight:'Switch to light mode',toDark:'Switch to dark mode',lightMode:'Light mode',darkMode:'Dark mode',openCart:n=>`Open cart (${n} ${n===1?'item':'items'})`,added:n=>`${n} added to cart.`,viewCart:'View cart',
   cartEmpty1:'Your cart is empty.',cartEmpty2:'Tap “Add to cart” on the items you need.',qtyOf:n=>`Quantity of ${n}`,school:'School / company name',yourName:'Your name',tel:'Phone number',optional:'(optional)',orderNote:'Note',orderNoteHint:'(optional, e.g. date needed)',kinds:n=>`${n} ${n===1?'item':'items'}`,units:n=>`${n} ${n===1?'unit':'units'}`,
   send:'Send order via WhatsApp',copy:'Copy order list',clear:'Clear cart',copied:'Copied',copyFail:'Could not copy',needName:'Please fill in your school name and your name first.',allCats:'All categories',
-  ghE401:'Key expired or wrong. Log in again at #admin.',ghE403:'Key has no write permission (Contents: Read and write) or is not yet approved by the organisation.',trToEn:'Translate to English ↓',trToMs:'Translate to BM ↑',trEmpty:'Write a description first.',trConfirm:'There is already text. Tap again to replace it.',trWait:'Translating…',trDone:'Done. Please review before Save.',trFail:'Translation failed. Try again.',descMs:'Description (BM)',descEn:'Description (English)',descHint:'e.g. size, material, pieces per pack…',adminTitle:'Seller login',adminHelp:'For Pustaka Chiew staff only. Paste your GitHub key (token) to edit the catalogue. The key is stored on this device only.',adminKey:'GitHub key',adminLogin:'Log in',adminChecking:'Checking…',adminBad:'Key is invalid or has no write permission.',adminOn:'You are logged in. Changes save straight to the website (customers see them in ~1 minute).',adminLogout:'Log out',saving:'Saving…',editPhotos:'Edit',closeEdit:'Close edit',errBig:'File is too large.',errUp:'Upload failed. Please try again.',errEmpty:'Name cannot be empty.',errSave:'Could not save. Please try again.',errDel:'Could not remove photo.',up:'Up',moreImgs:'More photos (max 12)',addImgs:'Add photos',nameEn:'Item name (English)',nOpts:n=>`${n} ${n===1?'option':'options'}`,codeBc:'Code / Barcode',varTitle:'Options · code · photo',varName:'Option',varPhoto:'Option photo',varAdd:'+ Add option',addNew:'+ Add new item',addBtn:'Add',addHint:'After adding, upload a photo on that item card.',hideItem:'Hide',showItem:'Show',hiddenTag:'Hidden',delItem:'Delete item',delConfirm:'Tap again to delete',zoomOpen:'Enlarge photo',photos:'Product photos',allPhoto:'All',pickOpt:'Please choose an option first.',down:'Down',moveTo:'Category',catNameMs:'Category name (BM)',catNameEn:'Category name (English)',saveName:'Save name',resetLayout:'Restore original layout',layoutHint:'Use ↑ ↓ and the category picker on each item to rearrange.',
+  ghE401:'Key expired or wrong. Log in again at #admin.',ghE403:'Key has no write permission (Contents: Read and write) or is not yet approved by the organisation.',brandLbl:'Brand (not translated)',brandHint:'e.g. COLOP, Lucky Star',trToEn:'Translate to English',trToMs:'Translate to BM',trEmpty:'Write a description first.',trConfirm:'There is already text. Tap again to replace it.',trWait:'Translating…',trDone:'Done. Please review before Save.',trFail:'Translation failed. Try again.',descMs:'Description (BM)',descEn:'Description (English)',descHint:'e.g. size, material, pieces per pack…',adminTitle:'Seller login',adminHelp:'For Pustaka Chiew staff only. Paste your GitHub key (token) to edit the catalogue. The key is stored on this device only.',adminKey:'GitHub key',adminLogin:'Log in',adminChecking:'Checking…',adminBad:'Key is invalid or has no write permission.',adminOn:'You are logged in. Changes save straight to the website (customers see them in ~1 minute).',adminLogout:'Log out',saving:'Saving…',editPhotos:'Edit',closeEdit:'Close edit',errBig:'File is too large.',errUp:'Upload failed. Please try again.',errEmpty:'Name cannot be empty.',errSave:'Could not save. Please try again.',errDel:'Could not remove photo.',up:'Up',moreImgs:'More photos (max 12)',addImgs:'Add photos',nameEn:'Item name (English)',nOpts:n=>`${n} ${n===1?'option':'options'}`,codeBc:'Code / Barcode',varTitle:'Options · code · photo',varName:'Option',varPhoto:'Option photo',varAdd:'+ Add option',addNew:'+ Add new item',addBtn:'Add',addHint:'After adding, upload a photo on that item card.',hideItem:'Hide',showItem:'Show',hiddenTag:'Hidden',delItem:'Delete item',delConfirm:'Tap again to delete',zoomOpen:'Enlarge photo',photos:'Product photos',allPhoto:'All',pickOpt:'Please choose an option first.',down:'Down',moveTo:'Category',catNameMs:'Category name (BM)',catNameEn:'Category name (English)',saveName:'Save name',resetLayout:'Restore original layout',layoutHint:'Use ↑ ↓ and the category picker on each item to rearrange.',
   oTitle:'*ORDER – Pustaka Chiew Catalogue*',oSchool:'School',oName:'Name',oTel:'Tel',oTotal:(a,b)=>`Total: ${a} ${a===1?'item':'items'}, ${b} ${b===1?'unit':'units'}`,oNote:'Note',
   st_menu:'Open category menu',st_tag:'School &amp; Office Supplies Provider',st_cats:'Categories',st_drawer:'Category menu',st_closeMenu:'Close menu',st_cart:'Order cart',st_closeCart:'Close cart',st_editbar:'<b>Edit mode.</b> Upload photos, rename items, or rearrange items and categories.',st_done:'Done',st_addr:'Address',st_email:'Email',st_scan:'Scan for WhatsApp',st_qr:'Pustaka Chiew WhatsApp QR code',langBtn:'BM',langAria:'Tukar ke Bahasa Melayu',tagBARU:'NEW'}
 };
@@ -641,7 +644,7 @@ function card(it,cat,showCat){
   const linked=!(editMode&&assetsApi);
   const imgBox=linked?`<a class="img" href="#p-${code}" tabindex="-1" aria-hidden="true">${img}${ex.tag?`<span class="tag">${tagL(ex.tag)}</span>`:''}</a>`:`<div class="img">${img}${ex.tag?`<span class="tag">${tagL(ex.tag)}</span>`:''}</div>`;
   return `<article class="card${isHidden(it)?' is-hidden':''}" data-k="${code}">${imgBox}${isHidden(it)?`<span class="hid-tag">${t('hiddenTag')}</span>`:''}
-  <div class="body"><div class="code">${t('code')} ${esc(skuOf(it))}</div><h3>${linked?`<a href="#p-${code}">${esc(name)}</a>`:esc(name)}</h3>${showCat?`<div class="from">${esc(cN(cat))}</div>`:''}
+  <div class="body"><div class="code">${t('code')} ${esc(skuOf(it))}</div>${brandOf(it)?`<div class="brand">${esc(brandOf(it))}</div>`:''}<h3>${linked?`<a href="#p-${code}">${esc(name)}</a>`:esc(name)}</h3>${showCat?`<div class="from">${esc(cN(cat))}</div>`:''}
   ${opts.length?`<div class="optsum">${esc(t('nOpts',opts.length))}<span>${esc(opts.slice(0,3).map(o=>oLi(it,o).replace(/\s*\(.*\)$/,'')).join(' · '))}${opts.length>3?' …':''}</span></div>`:''}
   ${editMode&&assetsApi?editRow(code,photoOf(code),it):`<button class="btn add-mini" type="button" data-add="${code}">${opts.length?t('chooseAdd'):t('addMini')}</button>`}</div></article>`;
 }
@@ -652,8 +655,10 @@ function editRow(code,ph,it){
     ${((liveItems[code]&&liveItems[code].gal)||[]).length<12?`<label class="xg xg-add" for="xg-${code}" title="${t('addImgs')}"><span aria-hidden="true">+</span><span class="vh">${t('addImgs')}</span></label><input class="vh" type="file" id="xg-${code}" data-xg="${code}" accept="image/png,image/jpeg,image/webp" multiple>`:''}</div></div>
   <div class="ed-move"><button class="btn" type="button" data-mv="${code}" data-dir="-1" aria-label="${t('up')}">↑</button><button class="btn" type="button" data-mv="${code}" data-dir="1" aria-label="${t('down')}">↓</button>
     <label class="vh" for="mc-${code}">${t('moveTo')}</label><select id="mc-${code}" data-mc="${code}">${CATS.map(x=>`<option value="${x.id}"${x.items.includes(it)?' selected':''}>${x.no} ${esc(cN(x))}</option>`).join('')}</select></div>
-  <div class="ed"><label for="n-${code}">${t('itemName')}</label><input type="text" id="n-${code}" data-name="${code}" maxlength="80" value="${esc(nameMs(it))}">
+  <div class="ed"><label for="br-${code}">${t('brandLbl')}</label><input type="text" id="br-${code}" data-name="${code}" maxlength="40" value="${esc(brandOf(it))}" placeholder="${t('brandHint')}">
+  <label for="n-${code}">${t('itemName')}</label><input type="text" id="n-${code}" data-name="${code}" maxlength="80" value="${esc(nameMs(it))}">
   <label for="ne-${code}">${t('nameEn')}</label><input type="text" id="ne-${code}" data-name="${code}" maxlength="80" value="${esc((liveItems[code]&&liveItems[code].ne)||'')}" placeholder="${esc(it.ne||nameMs(it))}">
+  <div class="row"><button class="btn tr" type="button" data-tr="${code}|ms|en|n">${t('trToEn')}</button><button class="btn tr" type="button" data-tr="${code}|en|ms|n">${t('trToMs')}</button></div>
   <label for="d-${code}">${t('descMs')}</label><textarea id="d-${code}" data-desc="${code}" rows="4" maxlength="1200" placeholder="${t('descHint')}">${esc((liveItems[code]&&liveItems[code].d)||'')}</textarea>
   <button class="btn tr" type="button" data-tr="${code}|ms|en">${t('trToEn')}</button>
   <label for="de-${code}">${t('descEn')}</label><textarea id="de-${code}" data-desc="${code}" rows="4" maxlength="1200" placeholder="${t('descHint')}">${esc((liveItems[code]&&liveItems[code].de)||'')}</textarea>
@@ -695,7 +700,7 @@ function catGrid(){
 }
 function searchResults(){
   const q=query.toLowerCase();
-  const hits=[];CATS.forEach(c=>vis(c).forEach(it=>{if((it.k+' '+skuOf(it)+' '+bcOf(it)+' '+Object.values(obOf(it)).join(' ')+' '+nameMs(it)+' '+(nameEn(it)||'')+' '+((liveItems[it.k]&&((liveItems[it.k].d||'')+' '+(liveItems[it.k].de||'')))||'')+' '+optsOf(it).join(' ')+' '+optsOf(it).map(o=>oLi(it,o)+' '+oL(o)).join(' ')+' '+c.name+' '+CAT_EN[c.id].name).toLowerCase().includes(q))hits.push([it,c])}));
+  const hits=[];CATS.forEach(c=>vis(c).forEach(it=>{if((it.k+' '+skuOf(it)+' '+bcOf(it)+' '+Object.values(obOf(it)).join(' ')+' '+nameMs(it)+' '+(nameEn(it)||'')+' '+brandOf(it)+' '+((liveItems[it.k]&&((liveItems[it.k].d||'')+' '+(liveItems[it.k].de||'')))||'')+' '+optsOf(it).join(' ')+' '+optsOf(it).map(o=>oLi(it,o)+' '+oL(o)).join(' ')+' '+c.name+' '+CAT_EN[c.id].name).toLowerCase().includes(q))hits.push([it,c])}));
   return `<div class="sec-head"><h2>${t('results')}</h2><span>${t('resultsFor',hits.length,esc(query))}</span></div>`+
    (hits.length?`<div class="grid">${hits.map(([it,c])=>card(it,c,true)).join('')}</div>`:`<p class="empty">${t('noResults')}</p>`);
 }
@@ -705,7 +710,7 @@ function product(it,c){
   const code=it.k,name=nameOf(it),opts=optsOf(it),ph=photoOf(code)||galOf(it)[0]||null;
   const firstOpt=opts.map(o=>optImg(it,o)).find(Boolean);
   const img=(ph||firstOpt)?`<img id="pdImg" src="${ph||firstOpt}" alt="${esc(name)}">`:it.sw?`<div class="sw">${it.sw.map(x=>`<i style="background:${x}"></i>`).join('')}</div>`:svg(c.icon,96);
-  const msg=t('askMsg',name,skuOf(it));
+  const msg=t('askMsg',fullName(it),skuOf(it));
   const gal=[];if(ph)gal.push({src:ph,o:''});galOf(it).forEach(src=>{if(src!==ph)gal.push({src,o:''});});opts.forEach(o=>{const s2=optImg(it,o);if(s2)gal.push({src:s2,o});});
   const noDefault=gal.some(g=>g.o)||Object.keys(obOf(it)).length>0;
   const V=vis(c),i=V.indexOf(it),others=V.filter(x=>x!==it).slice(Math.max(0,Math.min(i,V.length-5)),Math.max(0,Math.min(i,V.length-5))+4);
@@ -718,7 +723,7 @@ function product(it,c){
       </div>
       <div class="info">
         <div class="meta"><span>${t('code')} <span id="pdCode" data-base="${esc(skuOf(it))}">${esc(skuOf(it))}</span></span><span>·</span><a href="#${c.id}">${c.no} ${esc(cN(c))}</a></div>
-        <h1>${esc(name)}</h1>
+        ${brandOf(it)?`<div class="brand">${esc(brandOf(it))}</div>`:''}<h1>${esc(name)}</h1>
         ${descOf(it)?`<div class="desc">${esc(descOf(it))}</div>`:''}
         <div class="buy">
           ${opts.length?`<fieldset><legend>${t('options')}</legend><div class="opt-list">${opts.map((o,j)=>`<label><input type="radio" name="opt" value="${esc(o)}"${j===0&&!noDefault?' checked':''}><span>${esc(oLi(it,o))}</span></label>`).join('')}</div></fieldset>`:''}
@@ -757,7 +762,7 @@ function route(keepScroll){
   const id=location.hash.slice(1);const c=CATS.find(x=>x.id===id);
   const p=id.startsWith('p-')?findByCode(id.slice(2)):null;
   app.innerHTML=id==='admin'?adminPage():p?product(p[0],p[1]):c?category(c):home();
-  document.title=p?`${nameOf(p[0])} · ${t('siteTitle')}`:c?`${cN(c)} · ${t('siteTitle')}`:t('siteTitle');
+  document.title=p?`${fullName(p[0])} · ${t('siteTitle')}`:c?`${cN(c)} · ${t('siteTitle')}`:t('siteTitle');
   if(!keepScroll)window.scrollTo(0,0);
   const f=document.getElementById('sf');
   if(f){const q=document.getElementById('q');
@@ -787,12 +792,12 @@ function addToCart(k,opt,note,q){
   q=Math.max(1,Math.min(9999,parseInt(q,10)||1));
   const ex=cart.find(l=>l.k===k&&l.o===opt&&l.n===note);
   if(ex)ex.q=Math.min(9999,ex.q+q);else cart.push({k,o:opt,n:note,q});
-  saveCart();const f=findByCode(k);toast(t('added',nameOf(f[0])));
+  saveCart();const f=findByCode(k);toast(t('added',fullName(f[0])));
 }
 let toastT;
 function toast(msg){const el=document.getElementById('toast');el.innerHTML=`<span>${esc(msg)}</span><button type="button" id="toastOpen">${t('viewCart')}</button>`;el.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>el.hidden=true,3500);document.getElementById('toastOpen').onclick=()=>{el.hidden=true;openCart();};}
 function orderText(){
-  const lines=cart.map((l,i)=>{const it=findByCode(l.k)[0];return `${i+1}. [${codeFor(it,l.o)}] ${nameOf(it)}${l.o?' – '+oLi(it,l.o):''}${l.n?' ('+l.n+')':''} × ${l.q}`;});
+  const lines=cart.map((l,i)=>{const it=findByCode(l.k)[0];return `${i+1}. [${codeFor(it,l.o)}] ${fullName(it)}${l.o?' – '+oLi(it,l.o):''}${l.n?' ('+l.n+')':''} × ${l.q}`;});
   return [t('oTitle'),'',`${t('oSchool')}: ${buyer.school}`,`${t('oName')}: ${buyer.name}`,buyer.tel?`${t('oTel')}: ${buyer.tel}`:null,'',...lines,'',t('oTotal',cart.length,cartCount()),buyer.note?`${t('oNote')}: ${buyer.note}`:null].filter(x=>x!==null).join('\n');
 }
 const waOrderHref=()=>`https://wa.me/${WA_NUM}?text=${encodeURIComponent(orderText())}`;
@@ -800,7 +805,7 @@ let cartErr='';
 function renderCart(){
   const body=document.getElementById('cartBody'),foot=document.getElementById('cartFoot');
   if(!cart.length){body.innerHTML=`<div class="cart-empty"><p>${t('cartEmpty1')}</p><p>${t('cartEmpty2')}</p></div>`;foot.innerHTML='';return;}
-  body.innerHTML=`<div>${cart.map((l,i)=>{const it=findByCode(l.k)[0];return `<div class="line"><div><div class="lc">${t('code')} ${esc(codeFor(it,l.o))}</div><b>${esc(nameOf(it))}</b>${l.o||l.n?`<div class="lo">${esc([l.o?oLi(it,l.o):'',l.n].filter(Boolean).join(' · '))}</div>`:''}</div>
+  body.innerHTML=`<div>${cart.map((l,i)=>{const it=findByCode(l.k)[0];return `<div class="line"><div><div class="lc">${t('code')} ${esc(codeFor(it,l.o))}</div><b>${esc(fullName(it))}</b>${l.o||l.n?`<div class="lo">${esc([l.o?oLi(it,l.o):'',l.n].filter(Boolean).join(' · '))}</div>`:''}</div>
     <div class="lr"><div class="qty"><button type="button" data-cq="${i}" data-d="-1" aria-label="${t('dec')}">−</button><input type="number" inputmode="numeric" min="1" max="9999" value="${l.q}" data-ci="${i}" aria-label="${esc(t('qtyOf',nameOf(it)))}"><button type="button" data-cq="${i}" data-d="1" aria-label="${t('inc')}">+</button></div><button class="linkbtn" type="button" data-rm="${i}">${t('remove')}</button></div></div>`;}).join('')}</div>
     <div class="field"><label for="bSchool">${t('school')}</label><input id="bSchool" data-b="school" type="text" maxlength="100" autocomplete="organization" value="${esc(buyer.school)}"></div>
     <div class="field"><label for="bName">${t('yourName')}</label><input id="bName" data-b="name" type="text" maxlength="60" autocomplete="name" value="${esc(buyer.name)}"></div>
@@ -933,19 +938,20 @@ app.addEventListener('change',async e=>{
 });
 app.addEventListener('focusout',()=>{setTimeout(()=>{if(pendingRefresh)refresh();},0);});
 function itemState(code){const it=BYCODE[code];const lv=liveItems[code]||{};
-  return {n:nameMs(it),ne:(liveItems[code]&&liveItems[code].ne)||'',o:optsOf(it).slice(),bc:lv.bc||'',ob:Object.assign({},lv.ob||{}),oimg:Object.assign({},lv.oimg||{}),oen:Object.assign({},lv.oen||{}),gal:(lv.gal||[]).slice(),hidden:!!lv.hidden,d:lv.d||'',de:lv.de||''};}
+  return {n:nameMs(it),ne:(liveItems[code]&&liveItems[code].ne)||'',o:optsOf(it).slice(),bc:lv.bc||'',ob:Object.assign({},lv.ob||{}),oimg:Object.assign({},lv.oimg||{}),oen:Object.assign({},lv.oen||{}),gal:(lv.gal||[]).slice(),hidden:!!lv.hidden,br:lv.br||'',d:lv.d||'',de:lv.de||''};}
 async function writeItem(code,st){
   const it=BYCODE[code];
-  const plain=st.n===it.n&&st.o.join('|')===(it.o||[]).join('|')&&!st.bc&&!Object.keys(st.ob).length&&!Object.keys(st.oimg).length&&!Object.keys(st.oen||{}).length&&!st.ne&&!st.d&&!st.de&&!(st.gal&&st.gal.length)&&!st.hidden;
+  const plain=st.n===it.n&&st.o.join('|')===(it.o||[]).join('|')&&!st.bc&&!Object.keys(st.ob).length&&!Object.keys(st.oimg).length&&!Object.keys(st.oen||{}).length&&!st.ne&&!st.br&&!st.d&&!st.de&&!(st.gal&&st.gal.length)&&!st.hidden;
   if(plain){await dbApi.doc('items/'+code).delete();delete liveItems[code];return;}
-  const d={n:st.n,o:st.o,at:Date.now()};if(st.ne)d.ne=st.ne;if(st.gal&&st.gal.length)d.gal=st.gal;if(st.bc)d.bc=st.bc;if(Object.keys(st.ob).length)d.ob=st.ob;if(Object.keys(st.oimg).length)d.oimg=st.oimg;if(st.oen&&Object.keys(st.oen).length)d.oen=st.oen;if(st.hidden)d.hidden=true;if(st.d)d.d=st.d;if(st.de)d.de=st.de;
-  await dbApi.doc('items/'+code).set(d);liveItems[code]={n:d.n,ne:d.ne||'',gal:d.gal||[],o:d.o,bc:d.bc||'',sku:'',ob:d.ob||{},oimg:d.oimg||{},oen:d.oen||{},hidden:!!d.hidden,d:d.d||'',de:d.de||''};
+  const d={n:st.n,o:st.o,at:Date.now()};if(st.ne)d.ne=st.ne;if(st.gal&&st.gal.length)d.gal=st.gal;if(st.bc)d.bc=st.bc;if(Object.keys(st.ob).length)d.ob=st.ob;if(Object.keys(st.oimg).length)d.oimg=st.oimg;if(st.oen&&Object.keys(st.oen).length)d.oen=st.oen;if(st.hidden)d.hidden=true;if(st.br)d.br=st.br;if(st.d)d.d=st.d;if(st.de)d.de=st.de;
+  await dbApi.doc('items/'+code).set(d);liveItems[code]={n:d.n,ne:d.ne||'',gal:d.gal||[],o:d.o,bc:d.bc||'',sku:'',ob:d.ob||{},oimg:d.oimg||{},oen:d.oen||{},hidden:!!d.hidden,br:d.br||'',d:d.d||'',de:d.de||''};
 }
 const cleanCode=v=>String(v||'').trim().replace(/[^A-Za-z0-9\-_/.]/g,'').slice(0,24);
 function stateFromForm(code){const st=itemState(code);
   const ni=document.getElementById('n-'+code);if(ni)st.n=ni.value.trim().slice(0,80);
   const nei=document.getElementById('ne-'+code);if(nei)st.ne=nei.value.trim().slice(0,80);
   const bi=document.getElementById('b-'+code);if(bi)st.bc=cleanCode(bi.value);
+  const bri=document.getElementById('br-'+code);if(bri)st.br=bri.value.trim().slice(0,40);
   const di=document.getElementById('d-'+code);if(di)st.d=di.value.trim().slice(0,1200);
   const dei=document.getElementById('de-'+code);if(dei)st.de=dei.value.trim().slice(0,1200);
   const rows=(vdraft[code]||[]).map(r=>({n:r.n.trim().slice(0,30),b:cleanCode(r.b),img:r.img,e:(r.e||'').trim().slice(0,40)})).filter(r=>r.n);
@@ -1061,7 +1067,7 @@ applyLang();route();
 // ===== Data: parsers shared by Claude db and GitHub =====
 function parsePhotos(list){const m={};list.forEach(([id,v])=>{const a=v&&v.asset;if(typeof a==='string'&&/^[A-Za-z0-9]{32}$/.test(a))m[id]=a;});return m;}
 function parseNew(list){const arr=[];list.forEach(([id,v])=>{if(v&&typeof v.n==='string'&&v.n.trim()&&typeof v.cat==='string'&&/^\d\d-\d\d$/.test(id))arr.push({k:id,cat:v.cat,n:v.n.slice(0,80),o:Array.isArray(v.o)?v.o.filter(x=>typeof x==='string').slice(0,20):[],at:+v.at||0});});arr.sort((a,b)=>a.at-b.at);return arr;}
-function parseItems(list){const m={};list.forEach(([id,v])=>{const d={id};if(v&&typeof v.n==='string'&&v.n.trim()){m[id]={n:v.n.slice(0,80),gal:Array.isArray(v.gal)?v.gal.filter(x=>typeof x==='string'&&/^[A-Za-z0-9]{32}$/.test(x)).slice(0,12):[],ne:typeof v.ne==='string'?v.ne.slice(0,80):'',o:Array.isArray(v.o)?v.o.filter(x=>typeof x==='string').slice(0,20):[],sku:typeof v.sku==='string'?v.sku.slice(0,24):'',bc:typeof v.bc==='string'?v.bc.replace(/[^A-Za-z0-9\-_/.]/g,'').slice(0,24):'',hidden:v.hidden===true,d:typeof v.d==='string'?v.d.slice(0,1200):'',de:typeof v.de==='string'?v.de.slice(0,1200):'',ob:(()=>{const r={};if(v.ob&&typeof v.ob==='object')for(const [a,b] of Object.entries(v.ob))if(typeof b==='string')r[String(a).slice(0,30)]=b.replace(/[^A-Za-z0-9\-_/.]/g,'').slice(0,24);return r;})(),oimg:(()=>{const r={};if(v.oimg&&typeof v.oimg==='object')for(const [a,b] of Object.entries(v.oimg))if(typeof b==='string'&&/^[A-Za-z0-9]{32}$/.test(b))r[String(a).slice(0,30)]=b;return r;})(),oen:(()=>{const r={};if(v.oen&&typeof v.oen==='object')for(const [a,b] of Object.entries(v.oen))if(typeof b==='string'&&b.trim())r[String(a).slice(0,30)]=b.slice(0,40);return r;})()};}});return m;}
+function parseItems(list){const m={};list.forEach(([id,v])=>{const d={id};if(v&&typeof v.n==='string'&&v.n.trim()){m[id]={n:v.n.slice(0,80),gal:Array.isArray(v.gal)?v.gal.filter(x=>typeof x==='string'&&/^[A-Za-z0-9]{32}$/.test(x)).slice(0,12):[],ne:typeof v.ne==='string'?v.ne.slice(0,80):'',o:Array.isArray(v.o)?v.o.filter(x=>typeof x==='string').slice(0,20):[],sku:typeof v.sku==='string'?v.sku.slice(0,24):'',bc:typeof v.bc==='string'?v.bc.replace(/[^A-Za-z0-9\-_/.]/g,'').slice(0,24):'',hidden:v.hidden===true,br:typeof v.br==='string'?v.br.slice(0,40):'',d:typeof v.d==='string'?v.d.slice(0,1200):'',de:typeof v.de==='string'?v.de.slice(0,1200):'',ob:(()=>{const r={};if(v.ob&&typeof v.ob==='object')for(const [a,b] of Object.entries(v.ob))if(typeof b==='string')r[String(a).slice(0,30)]=b.replace(/[^A-Za-z0-9\-_/.]/g,'').slice(0,24);return r;})(),oimg:(()=>{const r={};if(v.oimg&&typeof v.oimg==='object')for(const [a,b] of Object.entries(v.oimg))if(typeof b==='string'&&/^[A-Za-z0-9]{32}$/.test(b))r[String(a).slice(0,30)]=b;return r;})(),oen:(()=>{const r={};if(v.oen&&typeof v.oen==='object')for(const [a,b] of Object.entries(v.oen))if(typeof b==='string'&&b.trim())r[String(a).slice(0,30)]=b.slice(0,40);return r;})()};}});return m;}
 const docsOf=snap=>snap.docs.map(d=>[d.id,d.data()]);
 function ghE(m,err){const st=err&&err.status;if(st===401)return m+' '+t('ghE401');if(st===403||st===404)return m+' '+t('ghE403');return st?m+' (GitHub '+st+')':m;}
 // ===== Terjemahan (MyMemory, percuma) =====
@@ -1086,14 +1092,14 @@ async function trText(txt,from,to){
 let trArm=null;
 app.addEventListener('click',async e=>{
   const b=e.target.closest('[data-tr]');if(!b)return;
-  const [c,from,to]=b.dataset.tr.split('|');
-  const src=document.getElementById((from==='ms'?'d-':'de-')+c),dst=document.getElementById((to==='ms'?'d-':'de-')+c);
+  const [c,from,to,kind]=b.dataset.tr.split('|');const ids=kind==='n'?{ms:'n-',en:'ne-'}:{ms:'d-',en:'de-'},lim=kind==='n'?80:1200;
+  const src=document.getElementById(ids[from]+c),dst=document.getElementById(ids[to]+c);
   if(!src||!dst)return;const txt=src.value.trim();
   const say=m=>{const el=b.closest('.ed').querySelector('.trmsg');if(el)el.textContent=m||'';};
   if(!txt){say(t('trEmpty'));return;}
   if(dst.value.trim()&&trArm!==b.dataset.tr){trArm=b.dataset.tr;say(t('trConfirm'));setTimeout(()=>{if(trArm===b.dataset.tr){trArm=null;say('');}},4000);return;}
   trArm=null;b.disabled=true;say(t('trWait'));
-  try{dst.value=(await trText(txt,from,to)).slice(0,1200);say(t('trDone'));}
+  try{dst.value=(await trText(txt,from,to)).slice(0,lim);say(t('trDone'));}
   catch(err){say(t('trFail'));}
   b.disabled=false;
 });
