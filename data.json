@@ -127,15 +127,18 @@
    }
   },
   "02-01": {
-   "n": "A4 IK Yellow 70gsm 450s",
+   "n": "A4 70gsm 450s",
    "o": [
     "Rim",
     "Box"
    ],
+   "at": 1795595476398,
    "ob": {
-    "Box": "8993280003538",
-    "Rim": "8993280003538"
-   }
+    "Rim": "8993280003538",
+    "Box": "8993280003538"
+   },
+   "br": "IK Yellow",
+   "de": "Brand : IK YELLOW\nPaper Size : A4 ( 210 x 297mm )\nDimensions: Standard A4 size (210mm x 297mm).\nPaper Weight : 80gsm\nSheets per ream : 450 sheets"
   },
   "02-02": {
    "n": "A4 IK Yellow 80gsm",
