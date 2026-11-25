@@ -141,6 +141,7 @@ html,body{overflow-x:hidden}
 .ed input[type=text]{font:inherit;font-size:14px;padding:7px 9px;border:1px solid var(--line);border-radius:4px;width:100%;color:var(--ink);background:var(--field)}
 .ed textarea{font:inherit;font-size:14px;line-height:1.5;padding:8px 9px;border:1px solid var(--line);border-radius:4px;width:100%;color:var(--ink);background:var(--field);resize:vertical}.ed textarea:focus{border-color:var(--red);outline:none}
 .ed .tr{align-self:flex-start;font-size:13px}.trmsg{font-size:12.5px;color:var(--muted)}
+.card .brand{min-height:1.3em;line-height:1.3;margin-bottom:2px}
 .brand{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.pd .brand{font-size:13px}
 .desc{white-space:pre-line;font-size:15px;line-height:1.65;color:var(--ink);opacity:.9;max-width:62ch}
 .ed input[type=text]:focus{border-color:var(--red);outline:none}
@@ -579,6 +580,7 @@ document.addEventListener('error',e=>{const im=e.target;if(im.tagName==='IMG'&&i
 const ITEMS={"02-01":{"n":"A4 IK Yellow 70gsm 450s","o":["Rim/Box"]},"02-02":{"n":"A4 IK Yellow 80gsm","o":["Rim/Box"]}}; // nama/spesifikasi tetap yang dibakar ke halaman
 const nameMs=it=>(liveItems[it.k]&&liveItems[it.k].n)||(ITEMS[it.k]&&ITEMS[it.k].n)||it.n;
 const nameEn=it=>{const lv=liveItems[it.k];if(lv&&lv.ne)return lv.ne;if(lv&&lv.n&&lv.n!==it.n)return '';return (ITEMS[it.k]&&ITEMS[it.k].ne)||it.ne||'';};
+const slotFor=c=>c&&CATS.some(x=>x===c)&&vis(c).some(x=>brandOf(x));
 const brandOf=it=>((liveItems[it.k]||{}).br)||'';
 const descOf=it=>{const lv=liveItems[it.k]||{};return LANG==='en'?(lv.de||lv.d||''):(lv.d||lv.de||'');};
 const fullName=it=>{const b=brandOf(it),n=nameOf(it);return b&&!n.toLowerCase().startsWith(b.toLowerCase())?b+' '+n:n;};
@@ -644,7 +646,7 @@ function card(it,cat,showCat){
   const linked=!(editMode&&assetsApi);
   const imgBox=linked?`<a class="img" href="#p-${code}" tabindex="-1" aria-hidden="true">${img}${ex.tag?`<span class="tag">${tagL(ex.tag)}</span>`:''}</a>`:`<div class="img">${img}${ex.tag?`<span class="tag">${tagL(ex.tag)}</span>`:''}</div>`;
   return `<article class="card${isHidden(it)?' is-hidden':''}" data-k="${code}">${imgBox}${isHidden(it)?`<span class="hid-tag">${t('hiddenTag')}</span>`:''}
-  <div class="body"><div class="code">${t('code')} ${esc(skuOf(it))}</div>${brandOf(it)?`<div class="brand">${esc(brandOf(it))}</div>`:''}<h3>${linked?`<a href="#p-${code}">${esc(name)}</a>`:esc(name)}</h3>${showCat?`<div class="from">${esc(cN(cat))}</div>`:''}
+  <div class="body"><div class="code">${t('code')} ${esc(skuOf(it))}</div>${brandOf(it)?`<div class="brand">${esc(brandOf(it))}</div>`:(slotFor(cat)?`<div class="brand" aria-hidden="true">&nbsp;</div>`:'')}<h3>${linked?`<a href="#p-${code}">${esc(name)}</a>`:esc(name)}</h3>${showCat?`<div class="from">${esc(cN(cat))}</div>`:''}
   ${opts.length?`<div class="optsum">${esc(t('nOpts',opts.length))}<span>${esc(opts.slice(0,3).map(o=>oLi(it,o).replace(/\s*\(.*\)$/,'')).join(' · '))}${opts.length>3?' …':''}</span></div>`:''}
   ${editMode&&assetsApi?editRow(code,photoOf(code),it):`<button class="btn add-mini" type="button" data-add="${code}">${opts.length?t('chooseAdd'):t('addMini')}</button>`}</div></article>`;
 }
