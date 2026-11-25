@@ -304,15 +304,14 @@
   "02-06": {
    "n": "A4 Colour Paper (Cyber)",
    "o": [
-    "Kuning",
-    "Hijau",
-    "Oren",
-    "Merah",
-    "Pink",
-    "Hitam",
+    "CS 321 Hijau",
+    "CS 342 Pink",
+    "CS 350 Merah",
+    "CS 363 Kuning",
+    "CS 371 Oren",
     "Mix"
    ],
-   "at": 1795597554386,
+   "at": 1795598019633,
    "gal": [
     "31f668b27d239822061a6fe13811db9c"
    ],
