@@ -255,6 +255,7 @@ a.img{text-decoration:none}
 .vars{display:flex;flex-direction:column;gap:6px}
 .vars .vl{font-size:12px;color:var(--muted)}
 .vrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr) 36px 28px;gap:5px;align-items:center;padding-bottom:6px;border-bottom:1px dashed var(--line)}
+.vmv{grid-column:3/5;display:flex;gap:4px}.vmv button{flex:1;height:32px;border:1px solid var(--line);border-radius:4px;background:var(--field);color:var(--ink);cursor:pointer;font-size:14px}.vmv button:disabled{opacity:.3;cursor:default}
 .vrow .ve{grid-column:1/3;font-size:12.5px;padding:6px 8px}
 .vrow input{font:inherit;font-size:13px;padding:7px 8px;border:1px solid var(--line);border-radius:4px;width:100%;min-width:0;color:var(--ink);background:var(--field)}
 .vimg{width:36px;height:36px;border:1px solid var(--line);border-radius:4px;display:flex;align-items:center;justify-content:center;cursor:pointer;background:var(--field);color:var(--muted);overflow:hidden}
@@ -654,7 +655,7 @@ function editRow(code,ph,it){
     <input type="text" data-vb="${code}|${i}" maxlength="24" value="${esc(r.b)}" placeholder="${t('codeBc')}" aria-label="${t('codeBc')} ${i+1}">
     <label class="vimg" for="vf-${code}-${i}" title="${t('varPhoto')}">${r.img?`<img src="${BAKED_BLOB[r.img]||'/_blob/'+r.img}" alt="">`:(optImg(it,r.n)?`<img src="${esc(optImg(it,r.n))}" alt="">`:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5l1.5-2h5L16 5"/></svg>`)}<span class="vh">${t('varPhoto')}</span></label><input class="vh" type="file" id="vf-${code}-${i}" data-vf="${code}|${i}" accept="image/png,image/jpeg,image/webp">
     <button class="vx" type="button" data-vrm="${code}|${i}" aria-label="${t('remove')} ${i+1}">×</button>
-    <input class="ve" type="text" data-ve="${code}|${i}" maxlength="40" value="${esc(r.e||'')}" placeholder="English: ${esc(OPT_EN[r.n]||r.n||'')}" aria-label="English ${i+1}"></div>`).join('')}
+    <input class="ve" type="text" data-ve="${code}|${i}" maxlength="40" value="${esc(r.e||'')}" placeholder="English: ${esc(OPT_EN[r.n]||r.n||'')}" aria-label="English ${i+1}"><div class="vmv"><button type="button" data-vmv="${code}|${i}|-1" aria-label="${t('up')} ${i+1}"${i===0?' disabled':''}>↑</button><button type="button" data-vmv="${code}|${i}|1" aria-label="${t('down')} ${i+1}"${i===draftOf(it).length-1?' disabled':''}>↓</button></div></div>`).join('')}
     <button class="btn" type="button" data-vadd="${code}">${t('varAdd')}</button></div>
   <label for="b-${code}">${t('codeBc')}</label><input type="text" id="b-${code}" data-bc="${code}" maxlength="24" value="${esc(bcOf(it)||fld(it,'sku'))}" placeholder="${code}">
   <div class="row"><button class="btn" type="button" data-hide="${code}">${isHidden(it)?t('showItem'):t('hideItem')}</button>${it.isNew?`<button class="btn danger" type="button" data-delnew="${code}">${delArm===code?t('delConfirm'):t('delItem')}</button>`:''}</div>
@@ -943,6 +944,7 @@ function stateFromForm(code){const st=itemState(code);
 app.addEventListener('input',e=>{const vn=e.target.dataset.vn,vb=e.target.dataset.vb,ve=e.target.dataset.ve;const key=vn||vb||ve;if(!key)return;const [c,i]=key.split('|');const r=vdraft[c]&&vdraft[c][+i];if(!r)return;if(vn){r.n=e.target.value;const en=e.target.closest('.vrow').querySelector('.ve');if(en)en.placeholder='English: '+(OPT_EN[r.n.trim()]||r.n.trim());}else if(vb)r.b=e.target.value;else r.e=e.target.value;});
 app.addEventListener('click',e=>{
   const va=e.target.closest('[data-vadd]');if(va){const c=va.dataset.vadd;draftOf(BYCODE[c]).push({n:'',b:'',img:'',e:''});refresh();const ins=document.querySelectorAll(`[data-vn^="${c}|"]`);ins.length&&ins[ins.length-1].focus();return;}
+  const vm=e.target.closest('[data-vmv]');if(vm){const [c,i,d]=vm.dataset.vmv.split('|');const a=draftOf(BYCODE[c]),x=+i,y=x+(+d);if(y>=0&&y<a.length){[a[x],a[y]]=[a[y],a[x]];refresh();}return;}
   const vr=e.target.closest('[data-vrm]');if(vr){const [c,i]=vr.dataset.vrm.split('|');draftOf(BYCODE[c]).splice(+i,1);refresh();return;}
 });
 app.addEventListener('change',async e=>{const f=e.target.closest('input[data-vf]');if(!f||!f.files[0]||!assetsApi||!dbApi)return;
