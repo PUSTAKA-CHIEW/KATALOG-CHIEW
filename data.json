@@ -150,22 +150,22 @@
   "02-04": {
    "n": "A4 Colour Paper (Light)",
    "o": [
-    "Biru",
-    "Hijau",
-    "Peach",
-    "Kuning",
-    "Pink"
+    "CS 120 Biru",
+    "CS 130 Hijau",
+    "CS 150 Peach",
+    "CS 160 Kuning",
+    "CS 170 Pink"
    ],
-   "at": 1795591346659,
+   "at": 1795591482078,
    "gal": [
     "40ee2f56513939994aa72ff00f26747a"
    ],
    "oimg": {
-    "Biru": "80d156beb544f39f9f78171c3e84668f",
-    "Hijau": "77948c9fa36ef3298097322ed6a06282",
-    "Kuning": "33185752b5c7f0adc853803955d2821e",
-    "Peach": "b6972c502f21a8a30c46bf5ad8b5e92f",
-    "Pink": "83efe36dda8d3f669249c46bbc0b242f"
+    "CS 120 Biru": "80d156beb544f39f9f78171c3e84668f",
+    "CS 130 Hijau": "77948c9fa36ef3298097322ed6a06282",
+    "CS 150 Peach": "b6972c502f21a8a30c46bf5ad8b5e92f",
+    "CS 160 Kuning": "33185752b5c7f0adc853803955d2821e",
+    "CS 170 Pink": "83efe36dda8d3f669249c46bbc0b242f"
    }
   },
   "02-05": {
