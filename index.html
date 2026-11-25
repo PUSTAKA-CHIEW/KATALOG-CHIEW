@@ -556,10 +556,11 @@ function cleanLayout(L){
   return out;
 }
 const curLayout=()=>liveLayout||LAYOUT_BAKED||{cats:{},names:{}};
+const isDel=k=>{try{return !!(liveItems[k]&&liveItems[k].deleted);}catch(e){return false;}};
 function rebuildLayout(){
   const L=curLayout(),placed=new Set();
-  CATS.forEach(c=>{const list=(L.cats&&L.cats[c.id])||BASE_ORDER[c.id];c.items=[];list.forEach(k=>{if(BYCODE[k]&&!placed.has(k)){placed.add(k);c.items.push(BYCODE[k]);}});});
-  CATS.forEach(c=>BASE_ORDER[c.id].forEach(k=>{if(!placed.has(k)){placed.add(k);c.items.push(BYCODE[k]);}}));
+  CATS.forEach(c=>{const list=(L.cats&&L.cats[c.id])||BASE_ORDER[c.id];c.items=[];list.forEach(k=>{if(BYCODE[k]&&!placed.has(k)&&!isDel(k)){placed.add(k);c.items.push(BYCODE[k]);}});});
+  CATS.forEach(c=>BASE_ORDER[c.id].forEach(k=>{if(!placed.has(k)&&!isDel(k)){placed.add(k);c.items.push(BYCODE[k]);}}));
 }
 function layoutSnapshot(){const L=curLayout();return {cats:Object.fromEntries(CATS.map(c=>[c.id,c.items.map(it=>it.k)])),names:JSON.parse(JSON.stringify(L.names||{}))};}
 rebuildLayout();
@@ -617,7 +618,7 @@ const T={
   siteTitle:'Katalog Pustaka Chiew',toLight:'Tukar ke mod cerah',toDark:'Tukar ke mod gelap',lightMode:'Mod cerah',darkMode:'Mod gelap',openCart:n=>`Buka troli (${n} barang)`,added:n=>`${n} ditambah ke troli.`,viewCart:'Lihat troli',
   cartEmpty1:'Troli anda masih kosong.',cartEmpty2:'Tekan “Tambah ke troli” pada barang yang diperlukan.',qtyOf:n=>`Kuantiti ${n}`,school:'Nama sekolah / syarikat',yourName:'Nama anda',tel:'No. telefon',optional:'(pilihan)',orderNote:'Catatan',orderNoteHint:'(pilihan, cth. tarikh diperlukan)',kinds:n=>`${n} jenis barang`,units:n=>`${n} unit`,
   send:'Hantar pesanan melalui WhatsApp',copy:'Salin senarai pesanan',clear:'Kosongkan troli',copied:'Disalin',copyFail:'Tidak dapat menyalin',needName:'Sila isi nama sekolah dan nama anda dahulu.',allCats:'Semua kategori',
-  ghE401:'Kunci tamat tempoh atau salah. Log masuk semula di #admin.',ghE403:'Kunci tiada kebenaran tulis (Contents: Read and write) atau belum diluluskan oleh organisasi.',brandLbl:'Jenama (tidak diterjemah)',brandHint:'cth. COLOP, Lucky Star',trToEn:'Terjemah ke English',trToMs:'Terjemah ke BM',trEmpty:'Tulis penerangan dahulu.',trConfirm:'Sudah ada teks. Tekan sekali lagi untuk menggantikan.',trWait:'Menterjemah…',trDone:'Siap. Sila semak sebelum Simpan.',trFail:'Terjemahan gagal. Cuba lagi.',descMs:'Penerangan (BM)',descEn:'Penerangan (English)',descHint:'Contoh: saiz, bahan, bilangan sehelai/kotak…',adminTitle:'Log masuk penjual',adminHelp:'Hanya untuk pekerja Pustaka Chiew. Tampal kunci GitHub (token) untuk mengedit katalog. Kunci disimpan dalam peranti ini sahaja.',adminKey:'Kunci GitHub',adminLogin:'Log masuk',adminChecking:'Menyemak…',adminBad:'Kunci tidak sah atau tiada kebenaran tulis.',adminOn:'Anda sudah log masuk. Perubahan disimpan terus ke laman web (dipaparkan kepada pelanggan dalam ~1 minit).',adminLogout:'Log keluar',saving:'Menyimpan…',editPhotos:'Edit',closeEdit:'Tutup edit',errBig:'Fail terlalu besar.',errUp:'Gagal memuat naik. Cuba lagi.',errEmpty:'Nama tidak boleh kosong.',errSave:'Gagal menyimpan. Cuba lagi.',errDel:'Gagal membuang gambar.',up:'Naik',moreImgs:'Gambar tambahan (maks. 12)',addImgs:'Tambah gambar',nameEn:'Nama barang (English)',nOpts:n=>`${n} pilihan`,codeBc:'Kod / Barcode',varTitle:'Pilihan · kod · gambar',varName:'Pilihan',varPhoto:'Gambar pilihan',varAdd:'+ Tambah pilihan',addNew:'+ Tambah barang baru',addBtn:'Tambah',addHint:'Selepas ditambah, muat naik gambar pada kad barang itu.',hideItem:'Sembunyikan',showItem:'Tunjukkan',hiddenTag:'Tersembunyi',delItem:'Padam barang',delConfirm:'Tekan lagi untuk padam',zoomOpen:'Besarkan gambar',photos:'Gambar produk',allPhoto:'Semua',pickOpt:'Sila pilih satu pilihan dahulu.',down:'Turun',moveTo:'Kategori',catNameMs:'Nama kategori (BM)',catNameEn:'Nama kategori (English)',saveName:'Simpan nama',resetLayout:'Kembali susunan asal',layoutHint:'Guna ↑ ↓ dan pilihan kategori pada setiap barang untuk susun semula.',
+  ghE401:'Kunci tamat tempoh atau salah. Log masuk semula di #admin.',ghE403:'Kunci tiada kebenaran tulis (Contents: Read and write) atau belum diluluskan oleh organisasi.',brandLbl:'Jenama (tidak diterjemah)',brandHint:'cth. COLOP, Lucky Star',trToEn:'Terjemah ke English',trToMs:'Terjemah ke BM',trEmpty:'Tulis penerangan dahulu.',trConfirm:'Sudah ada teks. Tekan sekali lagi untuk menggantikan.',trWait:'Menterjemah…',trDone:'Siap. Sila semak sebelum Simpan.',trFail:'Terjemahan gagal. Cuba lagi.',descMs:'Penerangan (BM)',descEn:'Penerangan (English)',descHint:'Contoh: saiz, bahan, bilangan sehelai/kotak…',adminTitle:'Log masuk penjual',adminHelp:'Hanya untuk pekerja Pustaka Chiew. Tampal kunci GitHub (token) untuk mengedit katalog. Kunci disimpan dalam peranti ini sahaja.',adminKey:'Kunci GitHub',adminLogin:'Log masuk',adminChecking:'Menyemak…',adminBad:'Kunci tidak sah atau tiada kebenaran tulis.',adminOn:'Anda sudah log masuk. Perubahan disimpan terus ke laman web (dipaparkan kepada pelanggan dalam ~1 minit).',adminLogout:'Log keluar',saving:'Menyimpan…',editPhotos:'Edit',closeEdit:'Tutup edit',errBig:'Fail terlalu besar.',errUp:'Gagal memuat naik. Cuba lagi.',errEmpty:'Nama tidak boleh kosong.',errSave:'Gagal menyimpan. Cuba lagi.',errDel:'Gagal membuang gambar.',up:'Naik',moreImgs:'Gambar tambahan (maks. 12)',addImgs:'Tambah gambar',nameEn:'Nama barang (English)',nOpts:n=>`${n} pilihan`,codeBc:'Kod / Barcode',varTitle:'Pilihan · kod · gambar',varName:'Pilihan',varPhoto:'Gambar pilihan',varAdd:'+ Tambah pilihan',addNew:'+ Tambah barang baru',addBtn:'Tambah',addHint:'Selepas ditambah, muat naik gambar pada kad barang itu.',hideItem:'Sembunyikan',showItem:'Tunjukkan',hiddenTag:'Tersembunyi',delItem:'Padam barang',delConfirm:'Tekan lagi untuk padam (kekal)',zoomOpen:'Besarkan gambar',photos:'Gambar produk',allPhoto:'Semua',pickOpt:'Sila pilih satu pilihan dahulu.',down:'Turun',moveTo:'Kategori',catNameMs:'Nama kategori (BM)',catNameEn:'Nama kategori (English)',saveName:'Simpan nama',resetLayout:'Kembali susunan asal',layoutHint:'Guna ↑ ↓ dan pilihan kategori pada setiap barang untuk susun semula.',
   oTitle:'*PESANAN – Katalog Pustaka Chiew*',oSchool:'Sekolah',oName:'Nama',oTel:'Tel',oTotal:(a,b)=>`Jumlah: ${a} jenis barang, ${b} unit`,oNote:'Catatan',
   st_menu:'Buka menu kategori',st_tag:'Pembekal Bekalan Sekolah &amp; Pejabat',st_cats:'Kategori',st_drawer:'Menu kategori',st_closeMenu:'Tutup menu',st_cart:'Troli pesanan',st_closeCart:'Tutup troli',st_editbar:'<b>Mod edit.</b> Muat naik gambar, tukar nama, atau susun semula barang dan kategori.',st_done:'Selesai',st_addr:'Alamat',st_email:'Emel',st_scan:'Imbas untuk WhatsApp',st_qr:'Kod QR WhatsApp Pustaka Chiew',langBtn:'EN',langAria:'Switch to English',tagBARU:'BARU'},
  en:{code:'Code',chooseAdd:'Select &amp; add',addMini:'+ Add to cart',uploading:'Uploading…',changePhoto:'Change photo',uploadPhoto:'Upload photo',remove:'Remove',itemName:'Item name',optsComma:'Options (separate with commas)',save:'Save',restore:'Restore original',savedOk:'Saved',
@@ -673,7 +674,7 @@ function editRow(code,ph,it){
     <input class="ve" type="text" data-ve="${code}|${i}" maxlength="40" value="${esc(r.e||'')}" placeholder="English: ${esc(OPT_EN[r.n]||r.n||'')}" aria-label="English ${i+1}"><div class="vmv"><button type="button" data-vmv="${code}|${i}|-1" aria-label="${t('up')} ${i+1}"${i===0?' disabled':''}>↑</button><button type="button" data-vmv="${code}|${i}|1" aria-label="${t('down')} ${i+1}"${i===draftOf(it).length-1?' disabled':''}>↓</button></div></div>`).join('')}
     <button class="btn" type="button" data-vadd="${code}">${t('varAdd')}</button></div>
   <label for="b-${code}">${t('codeBc')}</label><input type="text" id="b-${code}" data-bc="${code}" maxlength="24" value="${esc(bcOf(it)||fld(it,'sku'))}" placeholder="${code}">
-  <div class="row"><button class="btn" type="button" data-hide="${code}">${isHidden(it)?t('showItem'):t('hideItem')}</button>${it.isNew?`<button class="btn danger" type="button" data-delnew="${code}">${delArm===code?t('delConfirm'):t('delItem')}</button>`:''}</div>
+  <div class="row"><button class="btn" type="button" data-hide="${code}">${isHidden(it)?t('showItem'):t('hideItem')}</button><button class="btn danger" type="button" data-delnew="${code}">${delArm===code?t('delConfirm'):t('delItem')}</button></div>
   <div class="row"><button class="btn primary" type="button" data-save="${code}">${t('save')}</button>${liveItems[code]?`<button class="btn" type="button" data-reset="${code}">${t('restore')}</button>`:''}${saved[code]?`<span class="ok">${t('savedOk')}</span>`:''}</div></div></div>`;
 }
 let delArm='',addErr='';
@@ -940,13 +941,13 @@ app.addEventListener('change',async e=>{
 });
 app.addEventListener('focusout',()=>{setTimeout(()=>{if(pendingRefresh)refresh();},0);});
 function itemState(code){const it=BYCODE[code];const lv=liveItems[code]||{};
-  return {n:nameMs(it),ne:(liveItems[code]&&liveItems[code].ne)||'',o:optsOf(it).slice(),bc:lv.bc||'',ob:Object.assign({},lv.ob||{}),oimg:Object.assign({},lv.oimg||{}),oen:Object.assign({},lv.oen||{}),gal:(lv.gal||[]).slice(),hidden:!!lv.hidden,br:lv.br||'',d:lv.d||'',de:lv.de||''};}
+  return {n:nameMs(it),ne:(liveItems[code]&&liveItems[code].ne)||'',o:optsOf(it).slice(),bc:lv.bc||'',ob:Object.assign({},lv.ob||{}),oimg:Object.assign({},lv.oimg||{}),oen:Object.assign({},lv.oen||{}),gal:(lv.gal||[]).slice(),hidden:!!lv.hidden,deleted:!!lv.deleted,br:lv.br||'',d:lv.d||'',de:lv.de||''};}
 async function writeItem(code,st){
   const it=BYCODE[code];
-  const plain=st.n===it.n&&st.o.join('|')===(it.o||[]).join('|')&&!st.bc&&!Object.keys(st.ob).length&&!Object.keys(st.oimg).length&&!Object.keys(st.oen||{}).length&&!st.ne&&!st.br&&!st.d&&!st.de&&!(st.gal&&st.gal.length)&&!st.hidden;
+  const plain=st.n===it.n&&st.o.join('|')===(it.o||[]).join('|')&&!st.bc&&!Object.keys(st.ob).length&&!Object.keys(st.oimg).length&&!Object.keys(st.oen||{}).length&&!st.ne&&!st.deleted&&!st.br&&!st.d&&!st.de&&!(st.gal&&st.gal.length)&&!st.hidden;
   if(plain){await dbApi.doc('items/'+code).delete();delete liveItems[code];return;}
-  const d={n:st.n,o:st.o,at:Date.now()};if(st.ne)d.ne=st.ne;if(st.gal&&st.gal.length)d.gal=st.gal;if(st.bc)d.bc=st.bc;if(Object.keys(st.ob).length)d.ob=st.ob;if(Object.keys(st.oimg).length)d.oimg=st.oimg;if(st.oen&&Object.keys(st.oen).length)d.oen=st.oen;if(st.hidden)d.hidden=true;if(st.br)d.br=st.br;if(st.d)d.d=st.d;if(st.de)d.de=st.de;
-  await dbApi.doc('items/'+code).set(d);liveItems[code]={n:d.n,ne:d.ne||'',gal:d.gal||[],o:d.o,bc:d.bc||'',sku:'',ob:d.ob||{},oimg:d.oimg||{},oen:d.oen||{},hidden:!!d.hidden,br:d.br||'',d:d.d||'',de:d.de||''};
+  const d={n:st.n,o:st.o,at:Date.now()};if(st.ne)d.ne=st.ne;if(st.gal&&st.gal.length)d.gal=st.gal;if(st.bc)d.bc=st.bc;if(Object.keys(st.ob).length)d.ob=st.ob;if(Object.keys(st.oimg).length)d.oimg=st.oimg;if(st.oen&&Object.keys(st.oen).length)d.oen=st.oen;if(st.hidden)d.hidden=true;if(st.deleted)d.deleted=true;if(st.br)d.br=st.br;if(st.d)d.d=st.d;if(st.de)d.de=st.de;
+  await dbApi.doc('items/'+code).set(d);liveItems[code]={n:d.n,ne:d.ne||'',gal:d.gal||[],o:d.o,bc:d.bc||'',sku:'',ob:d.ob||{},oimg:d.oimg||{},oen:d.oen||{},hidden:!!d.hidden,deleted:!!d.deleted,br:d.br||'',d:d.d||'',de:d.de||''};
 }
 const cleanCode=v=>String(v||'').trim().replace(/[^A-Za-z0-9\-_/.]/g,'').slice(0,24);
 function stateFromForm(code){const st=itemState(code);
@@ -1031,6 +1032,9 @@ app.addEventListener('click',async e=>{
   const dn=e.target.closest('[data-delnew]');
   if(dn){const k=dn.dataset.delnew;if(delArm!==k){delArm=k;refresh();setTimeout(()=>{if(delArm===k){delArm='';refresh();}},4000);return;}
     delArm='';
+    if(!(BYCODE[k]&&BYCODE[k].isNew)){
+      try{const cid=(CATS.find(c=>c.items.some(i=>i.k===k))||{}).id;const st=itemState(k);st.deleted=true;await writeItem(k,st);rebuildLayout();if(location.hash==='#p-'+k)location.hash='#'+(cid||'utama');}catch(err){errs[k]=ghE(t('errSave'),err);}
+      refresh();return;}
     try{const pid=live[k];await dbApi.doc('newitems/'+k).delete();await dbApi.doc('items/'+k).delete();
       if(pid){await dbApi.doc('photos/'+k).delete();await assetsApi.delete(pid).catch(()=>{});delete live[k];}
       liveNew=(liveNew||NEW_BAKED.slice()).filter(x=>x.k!==k);delete liveItems[k];applyNewItems();rebuildLayout();
@@ -1069,7 +1073,7 @@ applyLang();route();
 // ===== Data: parsers shared by Claude db and GitHub =====
 function parsePhotos(list){const m={};list.forEach(([id,v])=>{const a=v&&v.asset;if(typeof a==='string'&&/^[A-Za-z0-9]{32}$/.test(a))m[id]=a;});return m;}
 function parseNew(list){const arr=[];list.forEach(([id,v])=>{if(v&&typeof v.n==='string'&&v.n.trim()&&typeof v.cat==='string'&&/^\d\d-\d\d$/.test(id))arr.push({k:id,cat:v.cat,n:v.n.slice(0,80),o:Array.isArray(v.o)?v.o.filter(x=>typeof x==='string').slice(0,20):[],at:+v.at||0});});arr.sort((a,b)=>a.at-b.at);return arr;}
-function parseItems(list){const m={};list.forEach(([id,v])=>{const d={id};if(v&&typeof v.n==='string'&&v.n.trim()){m[id]={n:v.n.slice(0,80),gal:Array.isArray(v.gal)?v.gal.filter(x=>typeof x==='string'&&/^[A-Za-z0-9]{32}$/.test(x)).slice(0,12):[],ne:typeof v.ne==='string'?v.ne.slice(0,80):'',o:Array.isArray(v.o)?v.o.filter(x=>typeof x==='string').slice(0,20):[],sku:typeof v.sku==='string'?v.sku.slice(0,24):'',bc:typeof v.bc==='string'?v.bc.replace(/[^A-Za-z0-9\-_/.]/g,'').slice(0,24):'',hidden:v.hidden===true,br:typeof v.br==='string'?v.br.slice(0,40):'',d:typeof v.d==='string'?v.d.slice(0,1200):'',de:typeof v.de==='string'?v.de.slice(0,1200):'',ob:(()=>{const r={};if(v.ob&&typeof v.ob==='object')for(const [a,b] of Object.entries(v.ob))if(typeof b==='string')r[String(a).slice(0,30)]=b.replace(/[^A-Za-z0-9\-_/.]/g,'').slice(0,24);return r;})(),oimg:(()=>{const r={};if(v.oimg&&typeof v.oimg==='object')for(const [a,b] of Object.entries(v.oimg))if(typeof b==='string'&&/^[A-Za-z0-9]{32}$/.test(b))r[String(a).slice(0,30)]=b;return r;})(),oen:(()=>{const r={};if(v.oen&&typeof v.oen==='object')for(const [a,b] of Object.entries(v.oen))if(typeof b==='string'&&b.trim())r[String(a).slice(0,30)]=b.slice(0,40);return r;})()};}});return m;}
+function parseItems(list){const m={};list.forEach(([id,v])=>{const d={id};if(v&&typeof v.n==='string'&&v.n.trim()){m[id]={n:v.n.slice(0,80),gal:Array.isArray(v.gal)?v.gal.filter(x=>typeof x==='string'&&/^[A-Za-z0-9]{32}$/.test(x)).slice(0,12):[],ne:typeof v.ne==='string'?v.ne.slice(0,80):'',o:Array.isArray(v.o)?v.o.filter(x=>typeof x==='string').slice(0,20):[],sku:typeof v.sku==='string'?v.sku.slice(0,24):'',bc:typeof v.bc==='string'?v.bc.replace(/[^A-Za-z0-9\-_/.]/g,'').slice(0,24):'',hidden:v.hidden===true,deleted:v.deleted===true,br:typeof v.br==='string'?v.br.slice(0,40):'',d:typeof v.d==='string'?v.d.slice(0,1200):'',de:typeof v.de==='string'?v.de.slice(0,1200):'',ob:(()=>{const r={};if(v.ob&&typeof v.ob==='object')for(const [a,b] of Object.entries(v.ob))if(typeof b==='string')r[String(a).slice(0,30)]=b.replace(/[^A-Za-z0-9\-_/.]/g,'').slice(0,24);return r;})(),oimg:(()=>{const r={};if(v.oimg&&typeof v.oimg==='object')for(const [a,b] of Object.entries(v.oimg))if(typeof b==='string'&&/^[A-Za-z0-9]{32}$/.test(b))r[String(a).slice(0,30)]=b;return r;})(),oen:(()=>{const r={};if(v.oen&&typeof v.oen==='object')for(const [a,b] of Object.entries(v.oen))if(typeof b==='string'&&b.trim())r[String(a).slice(0,30)]=b.slice(0,40);return r;})()};}});return m;}
 const docsOf=snap=>snap.docs.map(d=>[d.id,d.data()]);
 function ghE(m,err){const st=err&&err.status;if(st===401)return m+' '+t('ghE401');if(st===403||st===404)return m+' '+t('ghE403');return st?m+' (GitHub '+st+')':m;}
 // ===== Terjemahan (MyMemory, percuma) =====
@@ -1112,8 +1116,8 @@ let DATA={photos:{},items:{},newitems:{},layout:{}};
 function applyData(){
   live=parsePhotos(Object.entries(DATA.photos||{}));
   liveNew=parseNew(Object.entries(DATA.newitems||{}));applyNewItems();
-  const lm=DATA.layout&&DATA.layout.main;liveLayout=lm?cleanLayout(lm):null;rebuildLayout();
-  liveItems=parseItems(Object.entries(DATA.items||{}));refresh();
+  liveItems=parseItems(Object.entries(DATA.items||{}));
+  const lm=DATA.layout&&DATA.layout.main;liveLayout=lm?cleanLayout(lm):null;rebuildLayout();refresh();
 }
 async function ghReq(path,opt={}){
   const r=await fetch('https://api.github.com/repos/'+GH.owner+'/'+GH.repo+path,{method:opt.method||'GET',body:opt.body,cache:'no-store',headers:{'Authorization':'Bearer '+ghToken,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}});
@@ -1184,7 +1188,7 @@ app.addEventListener('click',e=>{if(e.target.id==='admOut'){ghLogout();route();}
       db.collection('photos').onSnapshot(snap=>{live=parsePhotos(docsOf(snap));refresh();},()=>{});
       db.collection('newitems').onSnapshot(snap=>{liveNew=parseNew(docsOf(snap));applyNewItems();rebuildLayout();refresh();},()=>{});
       db.doc('layout/main').onSnapshot(snap=>{liveLayout=snap.exists?cleanLayout(snap.data()):null;rebuildLayout();refresh();},()=>{});
-      db.collection('items').onSnapshot(snap=>{liveItems=parseItems(docsOf(snap));refresh();},()=>{});
+      db.collection('items').onSnapshot(snap=>{liveItems=parseItems(docsOf(snap));rebuildLayout();refresh();},()=>{});
     }
   }catch(e){}
 })();
