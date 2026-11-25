@@ -143,13 +143,13 @@
   "02-02": {
    "n": "A4 IK Yellow 80gsm",
    "o": [
-    "Rim/Box",
-    "Box"
+    "Rim",
+    "Kotak"
    ],
-   "at": 1795595631081,
+   "at": 1795595659391,
    "ob": {
-    "Rim/Box": "8993280003545",
-    "Box": "8993280003545"
+    "Rim": "8993280003545",
+    "Kotak": "8993280003545"
    },
    "d": "Jenama : IK YELLOW\nSaiz Kertas : A4 ( 210 x 297mm )\nDimensi: Saiz A4 standard (210mm x 297mm).\nBerat Kertas : 80gsm\nHelai setiap rim: 450 helai\nRim setiap kotak: 10 rim (4,500 helai)",
    "de": "Brand : IK YELLOW\nPaper Size : A4 ( 210 x 297mm )\nDimensions: Standard A4 size (210mm x 297mm).\nPaper Weight : 80gsm\nSheets per ream : 450 sheets\nReams per box : 10 reams (4,500 sheets)"
