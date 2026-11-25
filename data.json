@@ -371,7 +371,7 @@
     "P50 (29 × 68 mm)",
     "P60 (36x75mm)"
    ],
-   "at": 1795614079604,
+   "at": 1795614201563,
    "oimg": {
     "P10 (9 × 26 mm)": "a2851c1bb7359eea188bf6f5b504d721",
     "P20 (13 × 37 mm)": "8312b6c63259c66fa4a57512a82e6399",
@@ -379,7 +379,8 @@
     "P40 (21 × 57 mm)": "90da194e19d72c2ba80ebeafc1f9f98e",
     "P50 (29 × 68 mm)": "fa10b9e43d21edf55a6b8e95eb598e23",
     "P60 (36x75mm)": "fba13108e35ce0f122cba02ed37bbbec"
-   }
+   },
+   "de": "Stamp Shape: Rectangle\nInk Type: Water-based ink\nRubber: Red rubber\nInk refillable: Yes"
   }
  },
  "newitems": {
