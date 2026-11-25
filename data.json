@@ -132,13 +132,13 @@
     "Rim",
     "Box"
    ],
-   "at": 1795595476398,
+   "at": 1795595546949,
    "ob": {
     "Rim": "8993280003538",
     "Box": "8993280003538"
    },
    "br": "IK Yellow",
-   "de": "Brand : IK YELLOW\nPaper Size : A4 ( 210 x 297mm )\nDimensions: Standard A4 size (210mm x 297mm).\nPaper Weight : 80gsm\nSheets per ream : 450 sheets"
+   "de": "Brand : IK YELLOW\nPaper Size : A4 ( 210 x 297mm )\nDimensions: Standard A4 size (210mm x 297mm).\nPaper Weight : 80gsm\nSheets per ream : 450 sheets\nReams per box : 10 reams (4,500 sheets)"
   },
   "02-02": {
    "n": "A4 IK Yellow 80gsm",
