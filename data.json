@@ -209,9 +209,10 @@
     "Merah",
     "Ungu",
     "Lemon",
-    "Hitam"
+    "Hitam",
+    "Mix"
    ],
-   "at": 1795597610306,
+   "at": 1795597637951,
    "gal": [
     "42c72564e544e36035db6271c45e8438"
    ],
@@ -221,7 +222,8 @@
     "Oren": "d12c3a1816ee3c508d5f5da255b8abcf",
     "Merah": "b59b7199adb71fc000372f5348cc3f62",
     "Lemon": "cd548d01221dab397e1f7ae8b7583a1c",
-    "Hitam": "9e228f745410525821da655b7db5be1b"
+    "Hitam": "9e228f745410525821da655b7db5be1b",
+    "Mix": "b610bda72bb994c54f070903d62ee7ee"
    },
    "br": "Lucky Star"
   },
