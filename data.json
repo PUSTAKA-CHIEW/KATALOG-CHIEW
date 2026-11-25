@@ -227,16 +227,18 @@
    "br": "Lucky Star"
   },
   "02-08": {
-   "gal": [
-    "4600e71db08db10092d1464a736ae223"
-   ],
    "n": "A4 Colour Paper (Mix Cyber)",
    "o": [
     "Rim"
    ],
+   "at": 1795598390218,
+   "gal": [
+    "4600e71db08db10092d1464a736ae223"
+   ],
    "oimg": {
     "Rim": "cf265fdf8c6c0512caf92a7e16e49f8a"
-   }
+   },
+   "deleted": true
   },
   "05-14": {
    "n": "COLOP Chop Satu Baris (S110 / P15)",
