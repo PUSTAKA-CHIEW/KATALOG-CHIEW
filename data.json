@@ -160,14 +160,14 @@
     "Rim",
     "Kotak"
    ],
-   "at": 1795595819904,
+   "at": 1795595865554,
    "ob": {
     "Rim": "8993280001107",
     "Kotak": "8993280001107"
    },
    "br": "IK Yellow",
    "d": "Saiz Kertas : A3 ( 210 x 297mm )\nDimensi: Saiz A4 standard (210mm x 297mm).\nBerat Kertas: 70gsm\nHelai bagi setiap rim : 450 helai\nRim setiap kotak : 15 rim",
-   "de": "Paper Size : A3 ( 210 x 297mm )\nDimensions: Standard A4 size (210mm x 297mm).\nPaper Weight : 70gsm\nSheets per ream : 450 sheets\nReams per box : 5reams"
+   "de": "Paper Size : A3 ( 210 x 297mm )\nDimensions: Standard A4 size (210mm x 297mm).\nPaper Weight : 70gsm\nSheets per ream : 450 sheets\nReams per box : 5 reams"
   },
   "02-04": {
    "n": "A4 Colour Paper (Light)",
