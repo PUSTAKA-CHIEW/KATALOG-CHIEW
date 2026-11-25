@@ -211,26 +211,25 @@
    "n": "A4 Colour Paper (Dark)",
    "o": [
     "Emas",
+    "Lemon",
+    "Mix",
     "Hijau",
     "Oren",
     "Merah",
-    "Ungu",
-    "Lemon",
-    "Hitam",
-    "Mix"
+    "Hitam"
    ],
-   "at": 1795597637951,
+   "at": 1795614590360,
    "gal": [
     "42c72564e544e36035db6271c45e8438"
    ],
    "oimg": {
     "Emas": "50071dcc2d75157a8a1cfaa8c8cc6c61",
+    "Lemon": "cd548d01221dab397e1f7ae8b7583a1c",
+    "Mix": "b610bda72bb994c54f070903d62ee7ee",
     "Hijau": "da30cee0d32cb0ede8c30831b7f3fbb6",
     "Oren": "d12c3a1816ee3c508d5f5da255b8abcf",
     "Merah": "b59b7199adb71fc000372f5348cc3f62",
-    "Lemon": "cd548d01221dab397e1f7ae8b7583a1c",
-    "Hitam": "9e228f745410525821da655b7db5be1b",
-    "Mix": "b610bda72bb994c54f070903d62ee7ee"
+    "Hitam": "9e228f745410525821da655b7db5be1b"
    },
    "br": "Lucky Star"
   },
