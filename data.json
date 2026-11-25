@@ -360,6 +360,20 @@
     "Pocket Plus 30 (17 × 37 mm)": "251b554a8f074e1745451ff921d3c6ec",
     "Pocket Plus 40 (22 × 58 mm)": "8bc61d574c9e15e85b3be0c03f72ff09"
    }
+  },
+  "05-12": {
+   "n": "COLOP Printer (Chop Dakwat Sendiri)",
+   "o": [
+    "P10 (9 × 26 mm)",
+    "P20 (13 × 37 mm)",
+    "P30 (17 × 46 mm)",
+    "P40 (21 × 57 mm)",
+    "P50 (29 × 68 mm)"
+   ],
+   "at": 1795613223785,
+   "oimg": {
+    "P10 (9 × 26 mm)": "9e06f4c8e0632b5ed6aebf95aaff9fb1"
+   }
   }
  },
  "newitems": {
