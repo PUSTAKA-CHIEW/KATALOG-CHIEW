@@ -1052,7 +1052,7 @@ function parseItems(list){const m={};list.forEach(([id,v])=>{const d={id};if(v&&
 const docsOf=snap=>snap.docs.map(d=>[d.id,d.data()]);
 // ===== GitHub backend (laman awam + edit dengan kunci) =====
 const GH={owner:'PUSTAKA-CHIEW',repo:'KATALOG-CHIEW',branch:'main'};
-let ghToken=null;try{ghToken=localStorage.getItem('pc-ghtoken');}catch(e){}
+var ghToken=null;try{ghToken=localStorage.getItem('pc-ghtoken');}catch(e){}
 let DATA={photos:{},items:{},newitems:{},layout:{}};
 function applyData(){
   live=parsePhotos(Object.entries(DATA.photos||{}));
@@ -1098,7 +1098,7 @@ async function ghLoad(){
   if(!d){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(r.ok)d=await r.json();}catch(e){}}
   if(d){DATA=d;applyData();}
 }
-let ghAuthErr=null;
+var ghAuthErr=null;
 async function ghLogin(tok){
   ghToken=tok.trim();
   try{const r=await ghReq('');if(!r.permissions||!r.permissions.push)throw Object.assign(new Error('noperm'),{status:403});
