@@ -210,27 +210,27 @@
   "02-05": {
    "n": "A4 Colour Paper (Dark)",
    "o": [
-    "Emas",
-    "Lemon",
-    "Biru",
-    "Hijau",
-    "Oren",
-    "Merah",
-    "Hitam",
+    "CS 200 Emas",
+    "CS 210 Lemon",
+    "CS 220 Biru",
+    "CS 230 Hijau",
+    "CS 240 Oren",
+    "CS 250 Merah",
+    "CS 401 Hitam",
     "Mix"
    ],
-   "at": 1795614670338,
+   "at": 1795614724826,
    "gal": [
     "42c72564e544e36035db6271c45e8438"
    ],
    "oimg": {
-    "Emas": "50071dcc2d75157a8a1cfaa8c8cc6c61",
-    "Lemon": "cd548d01221dab397e1f7ae8b7583a1c",
-    "Biru": "581585dda1bb4b9e6c8b2c434b69e280",
-    "Hijau": "da30cee0d32cb0ede8c30831b7f3fbb6",
-    "Oren": "d12c3a1816ee3c508d5f5da255b8abcf",
-    "Merah": "b59b7199adb71fc000372f5348cc3f62",
-    "Hitam": "9e228f745410525821da655b7db5be1b",
+    "CS 200 Emas": "50071dcc2d75157a8a1cfaa8c8cc6c61",
+    "CS 210 Lemon": "cd548d01221dab397e1f7ae8b7583a1c",
+    "CS 220 Biru": "581585dda1bb4b9e6c8b2c434b69e280",
+    "CS 230 Hijau": "da30cee0d32cb0ede8c30831b7f3fbb6",
+    "CS 240 Oren": "d12c3a1816ee3c508d5f5da255b8abcf",
+    "CS 250 Merah": "b59b7199adb71fc000372f5348cc3f62",
+    "CS 401 Hitam": "9e228f745410525821da655b7db5be1b",
     "Mix": "b610bda72bb994c54f070903d62ee7ee"
    },
    "br": "Lucky Star"
