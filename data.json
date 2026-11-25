@@ -143,11 +143,15 @@
   "02-02": {
    "n": "A4 IK Yellow 80gsm",
    "o": [
-    "Rim/Box"
+    "Rim/Box",
+    "Box"
    ],
+   "at": 1795595617380,
    "ob": {
-    "Rim/Box": "8993280003545"
-   }
+    "Rim/Box": "8993280003545",
+    "Box": "8993280003545"
+   },
+   "de": "Brand : IK YELLOW\nPaper Size : A4 ( 210 x 297mm )\nDimensions: Standard A4 size (210mm x 297mm).\nPaper Weight : 80gsm\nSheets per ream : 450 sheets\nReams per box : 10 reams (4,500 sheets)"
   },
   "02-03": {
    "n": "Kertas A3",
