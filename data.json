@@ -157,11 +157,13 @@
   "02-03": {
    "n": "Kertas A3",
    "o": [
-    "Rim"
+    "Rim",
+    "Kotak"
    ],
-   "at": 1795595792053,
+   "at": 1795595811393,
    "ob": {
-    "Rim": "8993280001107"
+    "Rim": "8993280001107",
+    "Kotak": "8993280001107"
    },
    "br": "IK Yellow",
    "d": "Saiz Kertas : A3 ( 210 x 297mm )\nDimensi: Saiz A4 standard (210mm x 297mm).\nBerat Kertas: 70gsm\nHelai bagi setiap rim : 450 helai\nRim setiap kotak : 15 rim",
