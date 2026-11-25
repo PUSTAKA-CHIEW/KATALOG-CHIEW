@@ -163,9 +163,9 @@
     "CS 150 Peach",
     "CS 160 Kuning",
     "CS 170 Pink",
-    "Mix"
+    "CS 195 Mix"
    ],
-   "at": 1795593806011,
+   "at": 1795593843328,
    "gal": [
     "40ee2f56513939994aa72ff00f26747a",
     "420fe4c4a9f2eea7555c7aed16f60054"
@@ -176,7 +176,7 @@
     "CS 150 Peach": "b6972c502f21a8a30c46bf5ad8b5e92f",
     "CS 160 Kuning": "33185752b5c7f0adc853803955d2821e",
     "CS 170 Pink": "83efe36dda8d3f669249c46bbc0b242f",
-    "Mix": "865d444a859decb8e612582976d71ce3"
+    "CS 195 Mix": "865d444a859decb8e612582976d71ce3"
    }
   },
   "02-05": {
