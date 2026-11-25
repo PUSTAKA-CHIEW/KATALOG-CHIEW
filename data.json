@@ -381,6 +381,14 @@
     "P60 (36x75mm)": "fba13108e35ce0f122cba02ed37bbbec"
    },
    "de": "Stamp Shape: Rectangle\nInk Type: Water-based ink\nRubber: Red rubber\nInk refillable: Yes"
+  },
+  "02-11": {
+   "n": "PVC Cover A4",
+   "o": [
+    "Rim"
+   ],
+   "at": 1795614250186,
+   "br": "Lucky Star"
   }
  },
  "newitems": {
