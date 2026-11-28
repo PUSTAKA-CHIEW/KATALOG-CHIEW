@@ -488,6 +488,9 @@
    },
    "ode": {
     "Eveready Heavy Duty 2 biji": "EVEREADY Super Heavy Duty C carbon zinc batteries, pack of 2. Storage life up to 3 years. No added mercury or cadmium. Leak-resistant design."
+   },
+   "oimg": {
+    "Eveready Heavy Duty 2 biji": "154e5f00f8546fad32e3b2b60508ff32"
    }
   },
   "03-09": {
@@ -505,6 +508,9 @@
    },
    "ode": {
     "Eveready Heavy Duty 2 biji": "EVEREADY Super Heavy Duty D carbon zinc batteries, pack of 2. For clocks, flashlights, radios and other devices. Ready to use for up to 3 years when not in use. Leak resistance based on IEC standard service tests. Carries the Quality Seal."
+   },
+   "oimg": {
+    "Eveready Heavy Duty 2 biji": "5797e2b3bffeed15f2bb2853706b2e34"
    }
   },
   "03-10": {
@@ -526,6 +532,10 @@
    "ode": {
     "Eveready Heavy Duty 9V": "EVEREADY Super Heavy Duty 9V carbon zinc battery, 1 piece. For clocks, flashlights, radios and other devices. Ready to use for up to 3 years when not in use. No added mercury or cadmium.",
     "Energizer 9V": "Energizer 9V alkaline battery, 1 piece. Holds power for up to 5 years in storage."
+   },
+   "oimg": {
+    "Eveready Heavy Duty 9V": "be4929ac1c4407b50b54fb2a73a516b0",
+    "Energizer 9V": "eed81645f96ccec138eec338f0090fda"
    }
   },
   "03-11": {
@@ -551,6 +561,10 @@
     "Energizer 2016": "Energizer 3IN1 Child Shield CR2016 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
     "Energizer 2025": "Energizer 3IN1 Child Shield CR2025 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
     "Energizer 2032": "Energizer 3IN1 Child Shield CR2032 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For calculators, scales, remotes, smart tags, keyless entry systems, medical devices, toys and games."
+   },
+   "oimg": {
+    "Energizer 2032": "5c25b77a03408f34cac4dd7e1ac8a26a",
+    "Energizer 2025": "61b61be777a7f2d9a5022d9cf73e564b"
    }
   },
   "03-12": {
@@ -572,6 +586,10 @@
    "ode": {
     "Energizer A23": "Energizer A23 (12V) miniature alkaline battery, 1 piece. Long-lasting, dependable power for wireless headsets, game controllers, cameras and medical devices.",
     "Energizer A27": "Energizer A27 (12V) miniature alkaline battery, 1 piece. Holds power for up to 3 years in storage. For cameras, video game controllers, wireless headsets, and glucose and blood monitors."
+   },
+   "oimg": {
+    "Energizer A27": "0dc4e4adfa8cb87f2228246b70e99c27",
+    "Energizer A23": "e491abb85bb1aed5c91e382686b3c518"
    }
   },
   "03-13": {
