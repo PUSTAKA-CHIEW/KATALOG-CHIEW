@@ -596,21 +596,30 @@
    "n": "Bateri Boleh Cas",
    "ne": "Rechargeable Batteries",
    "o": [
-    "Energizer Recharge Power Plus",
-    "Energizer Recharge + Pengecas"
+    "Energizer Recharge PP AA 2 biji",
+    "Energizer Recharge PP AAA 2 biji",
+    "Energizer Recharge Base + AA"
    ],
    "oen": {
-    "Energizer Recharge Power Plus": "Energizer Recharge Power Plus",
-    "Energizer Recharge + Pengecas": "Energizer Recharge + Charger"
+    "Energizer Recharge PP AA 2 biji": "Energizer Recharge Power Plus AA, 2 pcs",
+    "Energizer Recharge PP AAA 2 biji": "Energizer Recharge Power Plus AAA, 2 pcs",
+    "Energizer Recharge Base + AA": "Energizer Recharge Base + AA batteries"
    },
    "at": 1795851310262,
    "od": {
-    "Energizer Recharge Power Plus": "Bateri boleh cas semula Energizer Recharge Power Plus, tersedia dalam AA dan AAA. Tahan sehingga 4x lebih lama berbanding bateri alkaline biasa dalam kamera digital (hasil berbeza mengikut peranti). Boleh dicas semula beratus kali dan mengekalkan cas sehingga 1 tahun semasa disimpan. Dibuat dengan 22% bahan kitar semula. Sila nyatakan AA atau AAA dalam catatan semasa memesan.",
-    "Energizer Recharge + Pengecas": "Pengecas Energizer Base bersama bateri boleh cas semula. Mengecas bateri NiMH AA dan AAA sahaja, 2 atau 4 biji serentak. Lampu LED hijau menunjukkan bateri sedang dicas. Pengecasan penuh kira-kira 8 jam. Menurut laman rasmi, pek pengecas Base mengandungi 4 bateri AA."
+    "Energizer Recharge PP AA 2 biji": "Bateri boleh cas semula Energizer Recharge Power Plus AA, pek 2 biji, telah dicas awal. Tahan sehingga 4x lebih lama berbanding bateri alkaline biasa dalam kamera digital (hasil berbeza mengikut peranti). Boleh dicas semula beratus kali dan mengekalkan cas sehingga 1 tahun semasa disimpan.",
+    "Energizer Recharge PP AAA 2 biji": "Bateri boleh cas semula Energizer Recharge Power Plus AAA, pek 2 biji, telah dicas awal. Tahan sehingga 4x lebih lama berbanding bateri alkaline biasa dalam kamera digital (hasil berbeza mengikut peranti). Boleh dicas semula beratus kali dan mengekalkan cas sehingga 1 tahun semasa disimpan.",
+    "Energizer Recharge Base + AA": "Set pengecas Energizer Recharge Base bersama bateri NiMH AA boleh cas. Mengecas bateri NiMH AA dan AAA, 2 atau 4 biji serentak. Mengecas melalui USB dan ada penunjuk status cas."
    },
    "ode": {
-    "Energizer Recharge Power Plus": "Energizer Recharge Power Plus rechargeable batteries, available in AA and AAA. Lasts up to 4x longer than basic alkaline in digital cameras (results vary by device). Can be recharged hundreds of times and holds its charge for up to 1 year in storage. Made with 22% recycled materials. Please state AA or AAA in the note when ordering.",
-    "Energizer Recharge + Pengecas": "Energizer Base Charger with rechargeable batteries. Charges NiMH AA and AAA batteries only, 2 or 4 at a time. A green LED shows that batteries are charging. A full charge takes about 8 hours. According to the official page, the Base Charger pack includes 4 AA batteries."
+    "Energizer Recharge PP AA 2 biji": "Energizer Recharge Power Plus AA rechargeable batteries, pack of 2, pre-charged. Lasts up to 4x longer than basic alkaline in digital cameras (results vary by device). Can be recharged hundreds of times and holds its charge for up to 1 year in storage.",
+    "Energizer Recharge PP AAA 2 biji": "Energizer Recharge Power Plus AAA rechargeable batteries, pack of 2, pre-charged. Lasts up to 4x longer than basic alkaline in digital cameras (results vary by device). Can be recharged hundreds of times and holds its charge for up to 1 year in storage.",
+    "Energizer Recharge Base + AA": "Energizer Recharge Base charger set with rechargeable NiMH AA batteries. Charges NiMH AA and AAA batteries, 2 or 4 at a time. Charges via USB and has a charge status indicator."
+   },
+   "ob": {
+    "Energizer Recharge PP AA 2 biji": "8888021301410",
+    "Energizer Recharge PP AAA 2 biji": "8888021301502",
+    "Energizer Recharge Base + AA": "8888021304275"
    }
   }
  },
@@ -670,8 +679,9 @@
   "03-13": {
    "n": "Bateri Boleh Cas",
    "o": [
-    "Energizer Recharge Power Plus",
-    "Energizer Recharge + Pengecas"
+    "Energizer Recharge PP AA 2 biji",
+    "Energizer Recharge PP AAA 2 biji",
+    "Energizer Recharge Base + AA"
    ],
    "cat": "bateri",
    "at": 1795850679077
