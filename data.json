@@ -543,14 +543,14 @@
    },
    "at": 1795851310262,
    "od": {
-    "Energizer 2016": "Bateri butang lithium 3V Energizer Ultimate Child Shield (CR2016), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk alat kawalan jauh, peranti perubatan, sistem masuk tanpa kunci, mainan dan permainan.",
-    "Energizer 2025": "Bateri butang lithium 3V Energizer Ultimate Child Shield (CR2025), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk alat kawalan jauh, peranti perubatan, sistem masuk tanpa kunci, mainan dan permainan.",
-    "Energizer 2032": "Bateri butang lithium 3V Energizer Ultimate Child Shield (CR2032), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk kalkulator, penimbang, alat kawalan jauh, tag pintar, sistem masuk tanpa kunci, peranti perubatan, mainan dan permainan."
+    "Energizer 2016": "Bateri butang lithium 3V Energizer 3IN1 Child Shield (CR2016), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk alat kawalan jauh, peranti perubatan, sistem masuk tanpa kunci, mainan dan permainan.",
+    "Energizer 2025": "Bateri butang lithium 3V Energizer 3IN1 Child Shield (CR2025), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk alat kawalan jauh, peranti perubatan, sistem masuk tanpa kunci, mainan dan permainan.",
+    "Energizer 2032": "Bateri butang lithium 3V Energizer 3IN1 Child Shield (CR2032), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk kalkulator, penimbang, alat kawalan jauh, tag pintar, sistem masuk tanpa kunci, peranti perubatan, mainan dan permainan."
    },
    "ode": {
-    "Energizer 2016": "Energizer Ultimate Child Shield CR2016 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
-    "Energizer 2025": "Energizer Ultimate Child Shield CR2025 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
-    "Energizer 2032": "Energizer Ultimate Child Shield CR2032 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For calculators, scales, remotes, smart tags, keyless entry systems, medical devices, toys and games."
+    "Energizer 2016": "Energizer 3IN1 Child Shield CR2016 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
+    "Energizer 2025": "Energizer 3IN1 Child Shield CR2025 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
+    "Energizer 2032": "Energizer 3IN1 Child Shield CR2032 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For calculators, scales, remotes, smart tags, keyless entry systems, medical devices, toys and games."
    }
   },
   "03-12": {
@@ -564,7 +564,15 @@
     "Energizer A23": "Energizer A23",
     "Energizer A27": "Energizer A27"
    },
-   "at": 1795851310262
+   "at": 1795851310262,
+   "od": {
+    "Energizer A23": "Bateri alkaline miniatur Energizer A23 (12V), pek 1 biji. Kuasa tahan lama dan boleh diharap untuk fon kepala tanpa wayar, alat kawalan permainan, kamera dan peranti perubatan.",
+    "Energizer A27": "Bateri alkaline miniatur Energizer A27 (12V), pek 1 biji. Menyimpan kuasa sehingga 3 tahun semasa disimpan. Sesuai untuk kamera, alat kawalan permainan video, fon kepala tanpa wayar dan alat pemantau glukosa dan darah."
+   },
+   "ode": {
+    "Energizer A23": "Energizer A23 (12V) miniature alkaline battery, 1 piece. Long-lasting, dependable power for wireless headsets, game controllers, cameras and medical devices.",
+    "Energizer A27": "Energizer A27 (12V) miniature alkaline battery, 1 piece. Holds power for up to 3 years in storage. For cameras, video game controllers, wireless headsets, and glucose and blood monitors."
+   }
   },
   "03-13": {
    "n": "Bateri Boleh Cas",
