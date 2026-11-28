@@ -445,11 +445,11 @@
     "Eveready Gold 4 biji (3+1)",
     "Eveready Heavy Duty 4 biji"
    ],
-   "at": 1795851777491,
+   "at": 1795853276165,
    "ne": "AAA Batteries",
    "oimg": {
     "Energizer Max 2 biji": "094a6c5b78d8f6ea969bee8fba47c137",
-    "Energizer Max 3+1 biji": "9eb59c079bd96b3546b6ffb4286c861e"
+    "Energizer Max 3+1 biji": "75d92bb329bf387a86898f99a58e969f"
    },
    "oen": {
     "Energizer Max 2 biji": "Energizer Max 2 pcs",
@@ -458,19 +458,19 @@
     "Eveready Gold 4 biji (3+1)": "Eveready Gold 4 pcs (3+1)",
     "Eveready Heavy Duty 4 biji": "Eveready Heavy Duty 4 pcs (3+1)"
    },
+   "od": {
+    "Energizer Max 2 biji": "Bateri alkaline Energizer Max AAA. Tahan lama untuk kamera, loceng pintu, alat kawalan permainan, jam dan peralatan harian. Binaan tahan bocor.",
+    "Energizer Max 3+1 biji": "Bateri alkaline Energizer Max AAA. Tahan lama untuk kamera, loceng pintu, alat kawalan permainan, jam dan peralatan harian. Binaan tahan bocor.",
+    "Eveready Gold 2 biji": "Bateri alkaline EVEREADY Gold AAA, pek 2 biji. Lebih tahan lama berbanding EVEREADY Super Heavy Duty*. Sesuai untuk jam, radio dan mainan. Sedia digunakan sehingga 12 tahun semasa disimpan. Tiada tambahan merkuri atau kadmium. Prestasi menyeluruh yang jimat.",
+    "Eveready Gold 4 biji (3+1)": "Bateri alkaline EVEREADY Gold AAA, pek 4 biji. Lebih tahan lama berbanding EVEREADY Super Heavy Duty*. Sesuai untuk jam, radio dan mainan. Sedia digunakan sehingga 12 tahun semasa disimpan. Tiada tambahan merkuri atau kadmium. Prestasi menyeluruh yang jimat.",
+    "Eveready Heavy Duty 4 biji": "Bateri karbon zink EVEREADY Super Heavy Duty AAA, pek 4 biji (3+1). Kuasa boleh diharap untuk peralatan harian. Hayat simpanan sehingga 4 tahun. Tiada tambahan merkuri atau kadmium. Reka bentuk tahan bocor."
+   },
    "ode": {
     "Energizer Max 2 biji": "2/4-pack of Energizer Max AAA batteries, Alkaline\nLongest Lasting: Up to 3x longer lasting than an Energizer basic alkaline battery in digital cameras\nTrusted Power: AAA batteries for cameras, doorbells, controllers, clocks and more of your everyday devices\nLeak Protection: AAA batteries with leak-resistant construction.",
     "Energizer Max 3+1 biji": "2/4-pack of Energizer Max AAA batteries, Alkaline\nLongest Lasting: Up to 3x longer lasting than an Energizer basic alkaline battery in digital cameras\nTrusted Power: AAA batteries for cameras, doorbells, controllers, clocks and more of your everyday devices\nLeak Protection: AAA batteries with leak-resistant construction.",
     "Eveready Gold 2 biji": "EVEREADY Gold AAA alkaline batteries, 2-pack. Lasts longer than EVEREADY Super Heavy Duty*. For everyday devices such as clocks, radios and toys. Ready to use for up to 12 years in storage. No added mercury or cadmium. Budget-friendly all-round performance.",
     "Eveready Gold 4 biji (3+1)": "EVEREADY Gold AAA alkaline batteries, 4-pack. Lasts longer than EVEREADY Super Heavy Duty*. For everyday devices such as clocks, radios and toys. Ready to use for up to 12 years in storage. No added mercury or cadmium. Budget-friendly all-round performance.",
     "Eveready Heavy Duty 4 biji": "EVEREADY Super Heavy Duty AAA carbon zinc batteries, pack of 4 (3+1). Dependable power for everyday devices. Storage life up to 4 years. No added mercury or cadmium. Leak-resistant design."
-   },
-   "od": {
-    "Eveready Gold 2 biji": "Bateri alkaline EVEREADY Gold AAA, pek 2 biji. Lebih tahan lama berbanding EVEREADY Super Heavy Duty*. Sesuai untuk jam, radio dan mainan. Sedia digunakan sehingga 12 tahun semasa disimpan. Tiada tambahan merkuri atau kadmium. Prestasi menyeluruh yang jimat.",
-    "Eveready Gold 4 biji (3+1)": "Bateri alkaline EVEREADY Gold AAA, pek 4 biji. Lebih tahan lama berbanding EVEREADY Super Heavy Duty*. Sesuai untuk jam, radio dan mainan. Sedia digunakan sehingga 12 tahun semasa disimpan. Tiada tambahan merkuri atau kadmium. Prestasi menyeluruh yang jimat.",
-    "Energizer Max 2 biji": "Bateri alkaline Energizer Max AAA. Tahan lama untuk kamera, loceng pintu, alat kawalan permainan, jam dan peralatan harian. Binaan tahan bocor.",
-    "Energizer Max 3+1 biji": "Bateri alkaline Energizer Max AAA. Tahan lama untuk kamera, loceng pintu, alat kawalan permainan, jam dan peralatan harian. Binaan tahan bocor.",
-    "Eveready Heavy Duty 4 biji": "Bateri karbon zink EVEREADY Super Heavy Duty AAA, pek 4 biji (3+1). Kuasa boleh diharap untuk peralatan harian. Hayat simpanan sehingga 4 tahun. Tiada tambahan merkuri atau kadmium. Reka bentuk tahan bocor."
    }
   },
   "03-03": {
