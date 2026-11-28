@@ -541,7 +541,17 @@
     "Energizer 2025": "Energizer 2025",
     "Energizer 2032": "Energizer 2032"
    },
-   "at": 1795851310262
+   "at": 1795851310262,
+   "od": {
+    "Energizer 2016": "Bateri butang lithium Energizer 2016. Menyimpan kuasa sehingga 10 tahun semasa disimpan. Beroperasi pada suhu -30°C hingga 60°C. Sesuai untuk jam tangan, kunci kereta, alat kawalan jauh, penggera, penimbang dan mainan. Tiada tambahan merkuri.",
+    "Energizer 2025": "Bateri butang lithium Energizer 2025. Menyimpan kuasa sehingga 10 tahun semasa disimpan. Beroperasi pada suhu -30°C hingga 60°C. Sesuai untuk jam tangan, kunci kereta, alat kawalan jauh, penggera, penimbang dan mainan. Tiada tambahan merkuri.",
+    "Energizer 2032": "Bateri butang lithium Energizer 2032. Menyimpan kuasa sehingga 10 tahun semasa disimpan. Beroperasi pada suhu -30°C hingga 60°C. Sesuai untuk jam tangan, kunci kereta, alat kawalan jauh, penggera, penimbang dan mainan. Tiada tambahan merkuri."
+   },
+   "ode": {
+    "Energizer 2016": "Energizer 2016 lithium coin battery. Holds power for up to 10 years in storage. Operates from -30°C to 60°C. For watches, car key fobs, remotes, alarm sensors, scales and toys. Zero added mercury.",
+    "Energizer 2025": "Energizer 2025 lithium coin battery. Holds power for up to 10 years in storage. Operates from -30°C to 60°C. For watches, car key fobs, remotes, alarm sensors, scales and toys. Zero added mercury.",
+    "Energizer 2032": "Energizer 2032 lithium coin battery. Holds power for up to 10 years in storage. Operates from -30°C to 60°C. For watches, car key fobs, remotes, alarm sensors, scales and toys. Zero added mercury."
+   }
   },
   "03-12": {
    "n": "Bateri A23 / A27",
