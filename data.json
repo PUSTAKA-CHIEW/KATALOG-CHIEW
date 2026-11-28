@@ -565,6 +565,10 @@
    "oimg": {
     "Energizer 2032": "5c25b77a03408f34cac4dd7e1ac8a26a",
     "Energizer 2025": "61b61be777a7f2d9a5022d9cf73e564b"
+   },
+   "ob": {
+    "Energizer 2016": "8888021301748",
+    "Energizer 2025": "8888021301762"
    }
   },
   "03-12": {
@@ -590,6 +594,10 @@
    "oimg": {
     "Energizer A27": "0dc4e4adfa8cb87f2228246b70e99c27",
     "Energizer A23": "e491abb85bb1aed5c91e382686b3c518"
+   },
+   "ob": {
+    "Energizer A23": "8888021300116",
+    "Energizer A27": "8888021300369"
    }
   },
   "03-13": {
