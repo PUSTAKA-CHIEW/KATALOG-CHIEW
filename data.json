@@ -393,15 +393,20 @@
    "de": "Size: A4 (210mm × 297mm)\nThickness: 0.2mm \nFinish : Transparent\n Common Pack Sizes: Usually 100 sheets per pack/ream"
   },
   "03-01": {
-   "n": "Energizer Batteri",
+   "n": "Energizer Bateri",
    "o": [
     "AA",
     "AAA"
    ],
-   "at": 1795836642155,
+   "at": 1795836745941,
+   "ne": "Energizer Batteries",
    "oimg": {
     "AA": "3dcc681730fadfa1d97f4e8c814f71df",
     "AAA": "094a6c5b78d8f6ea969bee8fba47c137"
+   },
+   "ode": {
+    "AA": "2/4-pack of Energizer Max AA batteries, Alkaline\nLongest Lasting: Up to 12x longer lasting than vs. carbon zinc based on ANSI Grooming test.\nTrusted Power: AA batteries for cameras, doorbells, controllers, clocks and more of your everyday devices\nLeak Protection: AA batteries with leak-resistant con",
+    "AAA": "2/4-pack of Energizer Max AAA batteries, Alkaline\nLongest Lasting: Up to 3x longer lasting than an Energizer basic alkaline battery in digital cameras\nTrusted Power: AAA batteries for cameras, doorbells, controllers, clocks and more of your everyday devices\nLeak Protection: AAA batteries with leak-r"
    }
   }
  },
