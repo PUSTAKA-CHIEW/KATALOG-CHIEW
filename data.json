@@ -639,6 +639,78 @@
     "Energizer Recharge PP AA 2 biji": "410c4e2d29db0582984dd31b4d04abe0",
     "Energizer Recharge PP AAA 2 biji": "3526f71ad025e978f17f9639ab09b1b3"
    }
+  },
+  "03-04": {
+   "o": [
+    "PG-47 Black",
+    "CL-57s Colour",
+    "GI-790 Cyan",
+    "GI-790 Kuning",
+    "GI-790 Magenta",
+    "GI-790 Hitam"
+   ],
+   "oen": {
+    "PG-47 Black": "PG-47 Black",
+    "CL-57s Colour": "CL-57s Colour",
+    "GI-790 Cyan": "GI-790 Cyan",
+    "GI-790 Kuning": "GI-790 Yellow",
+    "GI-790 Magenta": "GI-790 Magenta",
+    "GI-790 Hitam": "GI-790 Black"
+   },
+   "at": 1,
+   "n": "Cartridge Canon",
+   "ne": "Canon Ink Cartridge"
+  },
+  "03-05": {
+   "o": [
+    "HP 680 Hitam",
+    "HP 680 Warna",
+    "HP 682 Hitam",
+    "HP 682 Warna"
+   ],
+   "oen": {
+    "HP 680 Hitam": "HP 680 Black",
+    "HP 680 Warna": "HP 680 Colour",
+    "HP 682 Hitam": "HP 682 Black",
+    "HP 682 Warna": "HP 682 Colour"
+   },
+   "at": 1,
+   "n": "Cartridge HP",
+   "ne": "HP Ink Cartridge"
+  },
+  "03-06": {
+   "o": [
+    "BT5000 Cyan",
+    "BT5000 Kuning",
+    "BT5000 Magenta",
+    "BT-D60BK Hitam"
+   ],
+   "oen": {
+    "BT5000 Cyan": "BT5000 Cyan",
+    "BT5000 Kuning": "BT5000 Yellow",
+    "BT5000 Magenta": "BT5000 Magenta",
+    "BT-D60BK Hitam": "BT-D60BK Black"
+   },
+   "at": 1,
+   "n": "Cartridge Brother",
+   "ne": "Brother Ink Cartridge"
+  },
+  "03-07": {
+   "o": [
+    "003 Cyan",
+    "003 Kuning",
+    "003 Magenta",
+    "003 Hitam"
+   ],
+   "oen": {
+    "003 Cyan": "003 Cyan",
+    "003 Kuning": "003 Yellow",
+    "003 Magenta": "003 Magenta",
+    "003 Hitam": "003 Black"
+   },
+   "at": 1,
+   "n": "Cartridge Epson",
+   "ne": "Epson Ink Cartridge"
   }
  },
  "newitems": {
