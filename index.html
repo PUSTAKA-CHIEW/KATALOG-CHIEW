@@ -711,10 +711,14 @@ function catGrid(){
   return `<div class="sec-head"><h2>${t('catsTitle')}</h2><span>${t('catsCount',CATS.length,CATS.reduce((n,c)=>n+vis(c).length,0))}</span></div>
   <div class="cats">${CATS.map(c=>`<a class="cat" href="#${c.id}"><span class="ic">${svg(c.icon,24)}</span><span class="no">${c.no}</span><b>${esc(cN(c))}</b><small>${t('items',vis(c).length)}</small></a>`).join('')}</div>`;
 }
+const lev=(a,b,m)=>{if(Math.abs(a.length-b.length)>m)return m+1;let p=Array.from({length:b.length+1},(_,k)=>k);for(let x=1;x<=a.length;x++){const c=[x];let lo=x;for(let y=1;y<=b.length;y++){const v=Math.min(p[y]+1,c[y-1]+1,p[y-1]+(a[x-1]===b[y-1]?0:1));c.push(v);if(v<lo)lo=v;}if(lo>m)return m+1;p=c;}return p[b.length];};
+const ls=x=>x.toLowerCase().replace(/ies\b/g,'y').replace(/([a-z]{3})s\b/g,'$1');
+function fuzzyHit(h,query,fz){const hs=stem(h);const words=[...new Set(h.split(/[^a-z0-9]+/).filter(w=>w.length>2))];
+  return query.toLowerCase().split(/\s+/).filter(Boolean).every(t=>{if(h.includes(t)||hs.includes(stem(t)))return true;if(!fz)return false;const m=t.length<=3?0:t.length<=7?1:2;if(!m)return false;return words.some(w=>lev(t,w,m)<=m||lev(ls(t),ls(w),m)<=m);});}
 const stem=x=>x.toLowerCase().replace(/ies\b/g,'y').replace(/([a-z]{3})s\b/g,'$1').replace(/battery/g,'bateri');
 function searchResults(){
   const q=stem(query);
-  const hits=[];CATS.forEach(c=>vis(c).forEach(it=>{if(stem(it.k+' '+skuOf(it)+' '+bcOf(it)+' '+Object.values(obOf(it)).join(' ')+' '+nameMs(it)+' '+(nameEn(it)||'')+' '+brandOf(it)+' '+((liveItems[it.k]&&((liveItems[it.k].d||'')+' '+(liveItems[it.k].de||'')))||'')+' '+optsOf(it).join(' ')+' '+o2Of(it).join(' ')+' '+optsOf(it).map(o=>oLi(it,o)+' '+oL(o)).join(' ')+' '+c.name+' '+CAT_EN[c.id].name).includes(q))hits.push([it,c])}));
+  const hits=[];const run=fz=>CATS.forEach(c=>vis(c).forEach(it=>{{const h=(it.k+' '+skuOf(it)+' '+bcOf(it)+' '+Object.values(obOf(it)).join(' ')+' '+nameMs(it)+' '+(nameEn(it)||'')+' '+brandOf(it)+' '+((liveItems[it.k]&&((liveItems[it.k].d||'')+' '+(liveItems[it.k].de||'')))||'')+' '+optsOf(it).join(' ')+' '+o2Of(it).join(' ')+' '+optsOf(it).map(o=>oLi(it,o)+' '+oL(o)).join(' ')+' '+c.name+' '+CAT_EN[c.id].name).toLowerCase();if(fuzzyHit(h,query,fz))hits.push([it,c])}}));run(0);if(!hits.length)run(1);
   return `<div class="sec-head"><h2>${t('results')}</h2><span>${t('resultsFor',hits.length,esc(query))}</span></div>`+
    (hits.length?`<div class="grid">${hits.map(([it,c])=>card(it,c,true)).join('')}</div>`:`<p class="empty">${t('noResults')}</p>`);
 }
