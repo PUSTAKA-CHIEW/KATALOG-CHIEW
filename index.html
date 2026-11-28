@@ -262,6 +262,7 @@ a.img{text-decoration:none}
 .vrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr) 36px 28px;gap:5px;align-items:center;padding-bottom:6px;border-bottom:1px dashed var(--line)}
 .vmv{grid-column:3/5;display:flex;gap:4px}.vmv button{flex:1;height:32px;border:1px solid var(--line);border-radius:4px;background:var(--field);color:var(--ink);cursor:pointer;font-size:14px}.vmv button:disabled{opacity:.3;cursor:default}
 .vrow .vd{grid-column:1/-1;font:inherit;font-size:12.5px;padding:6px 8px;border:1px solid var(--line);border-radius:4px;width:100%;color:var(--ink);background:var(--field);resize:vertical}
+.vtr{grid-column:1/-1;display:flex;gap:6px}.vtr .btn{flex:1;padding:5px 8px;font-size:12px}
 .odesc{white-space:pre-line;font-size:14px;line-height:1.55;color:var(--muted);margin:-4px 0 12px}.odesc:empty{display:none}
 .vrow .ve{grid-column:1/3;font-size:12.5px;padding:6px 8px}
 .vrow input{font:inherit;font-size:13px;padding:7px 8px;border:1px solid var(--line);border-radius:4px;width:100%;min-width:0;color:var(--ink);background:var(--field)}
@@ -680,7 +681,7 @@ function editRow(code,ph,it){
     <input type="text" data-vb="${code}|${i}" maxlength="24" value="${esc(r.b)}" placeholder="${t('codeBc')}" aria-label="${t('codeBc')} ${i+1}">
     <label class="vimg" for="vf-${code}-${i}" title="${t('varPhoto')}">${r.img?`<img src="${BAKED_BLOB[r.img]||'/_blob/'+r.img}" alt="">`:(optImg(it,r.n)?`<img src="${esc(optImg(it,r.n))}" alt="">`:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5l1.5-2h5L16 5"/></svg>`)}<span class="vh">${t('varPhoto')}</span></label><input class="vh" type="file" id="vf-${code}-${i}" data-vf="${code}|${i}" accept="image/png,image/jpeg,image/webp">
     <button class="vx" type="button" data-vrm="${code}|${i}" aria-label="${t('remove')} ${i+1}">×</button>
-    <input class="ve" type="text" data-ve="${code}|${i}" maxlength="40" value="${esc(r.e||'')}" placeholder="English: ${esc(OPT_EN[r.n]||r.n||'')}" aria-label="English ${i+1}"><textarea class="vd" data-vd="${code}|${i}" rows="2" maxlength="300" placeholder="${t('odBm')}" aria-label="${t('odBm')} ${i+1}">${esc(r.d||'')}</textarea><textarea class="vd" data-vde="${code}|${i}" rows="2" maxlength="300" placeholder="${t('odEn')}" aria-label="${t('odEn')} ${i+1}">${esc(r.de||'')}</textarea><div class="vmv"><button type="button" data-vmv="${code}|${i}|-1" aria-label="${t('up')} ${i+1}"${i===0?' disabled':''}>↑</button><button type="button" data-vmv="${code}|${i}|1" aria-label="${t('down')} ${i+1}"${i===draftOf(it).length-1?' disabled':''}>↓</button></div></div>`).join('')}
+    <input class="ve" type="text" data-ve="${code}|${i}" maxlength="40" value="${esc(r.e||'')}" placeholder="English: ${esc(OPT_EN[r.n]||r.n||'')}" aria-label="English ${i+1}"><textarea class="vd" data-vd="${code}|${i}" rows="2" maxlength="300" placeholder="${t('odBm')}" aria-label="${t('odBm')} ${i+1}">${esc(r.d||'')}</textarea><textarea class="vd" data-vde="${code}|${i}" rows="2" maxlength="300" placeholder="${t('odEn')}" aria-label="${t('odEn')} ${i+1}">${esc(r.de||'')}</textarea><div class="vtr"><button class="btn tr" type="button" data-tr="${code}|ms|en|o|${i}">${t('trToEn')}</button><button class="btn tr" type="button" data-tr="${code}|en|ms|o|${i}">${t('trToMs')}</button></div><div class="vmv"><button type="button" data-vmv="${code}|${i}|-1" aria-label="${t('up')} ${i+1}"${i===0?' disabled':''}>↑</button><button type="button" data-vmv="${code}|${i}|1" aria-label="${t('down')} ${i+1}"${i===draftOf(it).length-1?' disabled':''}>↓</button></div></div>`).join('')}
     <button class="btn" type="button" data-vadd="${code}">${t('varAdd')}</button></div>
   <label for="b-${code}">${t('codeBc')}</label><input type="text" id="b-${code}" data-bc="${code}" maxlength="24" value="${esc(bcOf(it)||fld(it,'sku'))}" placeholder="${code}">
   <div class="row"><button class="btn" type="button" data-hide="${code}">${isHidden(it)?t('showItem'):t('hideItem')}</button><button class="btn danger" type="button" data-delnew="${code}">${delArm===code?t('delConfirm'):t('delItem')}</button></div>
@@ -1114,7 +1115,15 @@ async function trText(txt,from,to){
 let trArm=null;
 app.addEventListener('click',async e=>{
   const b=e.target.closest('[data-tr]');if(!b)return;
-  const [c,from,to,kind]=b.dataset.tr.split('|');const ids=kind==='n'?{ms:'n-',en:'ne-'}:{ms:'d-',en:'de-'},lim=kind==='n'?80:1200;
+  const [c,from,to,kind,oi]=b.dataset.tr.split('|');
+  if(kind==='o'){const sa=from==='ms'?'vd':'vde',da=to==='ms'?'vd':'vde';const src=document.querySelector(`[data-${sa}="${c}|${oi}"]`),dst=document.querySelector(`[data-${da}="${c}|${oi}"]`);if(!src||!dst)return;
+    const say=m=>{const el=b.closest('.ed').querySelector('.trmsg');if(el)el.textContent=m||'';};const txt=src.value.trim();
+    if(!txt){say(t('trEmpty'));return;}
+    if(dst.value.trim()&&trArm!==b.dataset.tr){trArm=b.dataset.tr;say(t('trConfirm'));setTimeout(()=>{if(trArm===b.dataset.tr){trArm=null;say('');}},4000);return;}
+    trArm=null;b.disabled=true;say(t('trWait'));
+    try{const v=(await trText(txt,from,to)).slice(0,300);dst.value=v;const r=vdraft[c]&&vdraft[c][+oi];if(r){if(to==='ms')r.d=v;else r.de=v;}say(t('trDone'));}catch(err){say(t('trFail'));}
+    b.disabled=false;return;}
+  const ids=kind==='n'?{ms:'n-',en:'ne-'}:{ms:'d-',en:'de-'},lim=kind==='n'?80:1200;
   const src=document.getElementById(ids[from]+c),dst=document.getElementById(ids[to]+c);
   if(!src||!dst)return;const txt=src.value.trim();
   const say=m=>{const el=b.closest('.ed').querySelector('.trmsg');if(el)el.textContent=m||'';};
