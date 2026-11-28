@@ -89,6 +89,9 @@
   },
   "03-14": {
    "asset": "bc86d2112b69b08ec3d25456cf8dc0b9"
+  },
+  "03-07": {
+   "asset": "7543dfe917e42981e79d7e609443b046"
   }
  },
  "items": {
@@ -776,7 +779,13 @@
     "003 Magenta": "Genuine Epson 003 ink bottle (Magenta), 65 ml\nApprox. 7,500 pages (colour)\nFor Epson EcoTank printers, e.g. L1110, L3110, L3150, L3210, L3250, L5190",
     "003 Hitam": "Genuine Epson 003 ink bottle (Black), 65 ml\nApprox. 4,500 pages (black)\nFor Epson EcoTank printers, e.g. L1110, L3110, L3150, L3210, L3250, L5190"
    },
-   "br": "Epson"
+   "br": "Epson",
+   "oimg": {
+    "003 Cyan": "e4cd4ccd2bfcc6fca61e1265b9c96e42",
+    "003 Kuning": "191f7a7bd9f46a3e48c0a32d60b63149",
+    "003 Magenta": "8390e1005114215b2b26575350407a11",
+    "003 Hitam": "c680c27d0e9fa8ddcbcb4fea9bde584f"
+   }
   },
   "03-14": {
    "n": "Dakwat Canon GI-790",
