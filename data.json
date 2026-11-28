@@ -87,7 +87,7 @@
    "asset": "a453923a63a2aa070d6400842226951d",
    "at": 1795851023078
   },
-  "03-04": {
+  "03-14": {
    "asset": "bc86d2112b69b08ec3d25456cf8dc0b9"
   }
  },
@@ -478,7 +478,8 @@
     "Eveready Gold 2 biji": "EVEREADY Gold AAA alkaline batteries, 2-pack. Lasts longer than EVEREADY Super Heavy Duty*. For everyday devices such as clocks, radios and toys. Ready to use for up to 12 years in storage. No added mercury or cadmium. Budget-friendly all-round performance.",
     "Eveready Gold 4 biji (3+1)": "EVEREADY Gold AAA alkaline batteries, 4-pack. Lasts longer than EVEREADY Super Heavy Duty*. For everyday devices such as clocks, radios and toys. Ready to use for up to 12 years in storage. No added mercury or cadmium. Budget-friendly all-round performance.",
     "Eveready Heavy Duty 4 biji": "EVEREADY Super Heavy Duty AAA carbon zinc batteries, pack of 4 (3+1). Dependable power for everyday devices. Storage life up to 4 years. No added mercury or cadmium. Leak-resistant design."
-   }
+   },
+   "br": "Energizer, Eveready"
   },
   "03-03": {
    "n": "Bateri C",
@@ -498,7 +499,8 @@
    },
    "oimg": {
     "Eveready Heavy Duty 2 biji": "154e5f00f8546fad32e3b2b60508ff32"
-   }
+   },
+   "br": "Eveready"
   },
   "03-09": {
    "n": "Bateri D",
@@ -518,7 +520,8 @@
    },
    "oimg": {
     "Eveready Heavy Duty 2 biji": "5797e2b3bffeed15f2bb2853706b2e34"
-   }
+   },
+   "br": "Eveready"
   },
   "03-10": {
    "n": "Bateri 9V",
@@ -543,7 +546,8 @@
    "oimg": {
     "Eveready Heavy Duty 9V": "be4929ac1c4407b50b54fb2a73a516b0",
     "Energizer 9V": "eed81645f96ccec138eec338f0090fda"
-   }
+   },
+   "br": "Energizer, Eveready"
   },
   "03-11": {
    "n": "Bateri Butang",
@@ -577,7 +581,8 @@
    "ob": {
     "Energizer 2016": "8888021301748",
     "Energizer 2025": "8888021301762"
-   }
+   },
+   "br": "Energizer"
   },
   "03-12": {
    "n": "Bateri A23 / A27",
@@ -606,7 +611,8 @@
    "ob": {
     "Energizer A23": "8888021300116",
     "Energizer A27": "8888021300369"
-   }
+   },
+   "br": "Energizer"
   },
   "03-13": {
    "n": "Bateri Boleh Cas",
@@ -641,52 +647,34 @@
     "Energizer Recharge Base + AA": "fbfe66b02bf39a15cef0f5e48cc97da2",
     "Energizer Recharge PP AA 2 biji": "410c4e2d29db0582984dd31b4d04abe0",
     "Energizer Recharge PP AAA 2 biji": "3526f71ad025e978f17f9639ab09b1b3"
-   }
+   },
+   "br": "Energizer"
   },
   "03-04": {
    "o": [
     "PG-47 Black",
-    "CL-57s Colour",
-    "GI-790 Cyan",
-    "GI-790 Kuning",
-    "GI-790 Magenta",
-    "GI-790 Hitam"
+    "CL-57s Colour"
    ],
    "oen": {
     "PG-47 Black": "PG-47 Black",
-    "CL-57s Colour": "CL-57s Colour",
-    "GI-790 Cyan": "GI-790 Cyan",
-    "GI-790 Kuning": "GI-790 Yellow",
-    "GI-790 Magenta": "GI-790 Magenta",
-    "GI-790 Hitam": "GI-790 Black"
+    "CL-57s Colour": "CL-57s Colour"
    },
-   "at": 1,
+   "at": 1795862344710,
    "n": "Cartridge Canon",
    "ne": "Canon Ink Cartridge",
    "oimg": {
-    "GI-790 Kuning": "f5334da6191da275d4d7f2e4679a65f7",
-    "GI-790 Magenta": "985d63880e9f4371688ab852f937132f",
-    "GI-790 Cyan": "0aea7ef8ea304a428b841aa3ec605f25",
-    "GI-790 Hitam": "b61ccd7c98f6679df0c47b41f7252f4c",
     "CL-57s Colour": "f35e417c4ab04e8ca32258a9f5cfef8f",
     "PG-47 Black": "c0ca83c6bbf3438206e1fa32c51a116c"
    },
    "od": {
-    "GI-790 Cyan": "Botol dakwat Canon GI-790 tulen (Cyan), buatan Jepun\nUntuk pencetak tangki dakwat boleh isi semula PIXMA siri G\nKira-kira 7,000 halaman (warna A4)\nHujung botol tahan tumpah untuk pengisian yang lebih bersih\nUntuk PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
-    "GI-790 Kuning": "Botol dakwat Canon GI-790 tulen (Kuning), buatan Jepun\nUntuk pencetak tangki dakwat boleh isi semula PIXMA siri G\nKira-kira 7,000 halaman (warna A4)\nHujung botol tahan tumpah untuk pengisian yang lebih bersih\nUntuk PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
-    "GI-790 Magenta": "Botol dakwat Canon GI-790 tulen (Magenta), buatan Jepun\nUntuk pencetak tangki dakwat boleh isi semula PIXMA siri G\nKira-kira 7,000 halaman (warna A4)\nHujung botol tahan tumpah untuk pengisian yang lebih bersih\nUntuk PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
-    "GI-790 Hitam": "Botol dakwat Canon GI-790 tulen (Hitam), buatan Jepun\nUntuk pencetak tangki dakwat boleh isi semula PIXMA siri G\nKira-kira 6,000 halaman (A4)\nHujung botol tahan tumpah untuk pengisian yang lebih bersih\nUntuk PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
     "PG-47 Black": "Kartrij Canon PG-47 FINE tulen (Hitam, dakwat pigmen)\nKira-kira 400 halaman (A4)\nUntuk PIXMA E400, E410, E460, E470, E480, E3170",
     "CL-57s Colour": "Kartrij Canon CL-57S FINE tulen (Warna, dakwat pewarna), saiz kecil\nKira-kira 180 halaman (warna A4)\nUntuk PIXMA E400, E410, E460, E470, E480, E3170"
    },
    "ode": {
-    "GI-790 Cyan": "Genuine Canon GI-790 ink bottle (Cyan), Made in Japan\nFor PIXMA G-series refillable ink tank printers\nApprox. 7,000 pages (A4 colour)\nSpill-resistant bottle tip for cleaner refilling\nFor PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
-    "GI-790 Kuning": "Genuine Canon GI-790 ink bottle (Yellow), Made in Japan\nFor PIXMA G-series refillable ink tank printers\nApprox. 7,000 pages (A4 colour)\nSpill-resistant bottle tip for cleaner refilling\nFor PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
-    "GI-790 Magenta": "Genuine Canon GI-790 ink bottle (Magenta), Made in Japan\nFor PIXMA G-series refillable ink tank printers\nApprox. 7,000 pages (A4 colour)\nSpill-resistant bottle tip for cleaner refilling\nFor PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
-    "GI-790 Hitam": "Genuine Canon GI-790 ink bottle (Black), Made in Japan\nFor PIXMA G-series refillable ink tank printers\nApprox. 6,000 pages (A4)\nSpill-resistant bottle tip for cleaner refilling\nFor PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
     "PG-47 Black": "Genuine Canon PG-47 FINE cartridge (Black, pigment ink)\nApprox. 400 pages (A4)\nFor PIXMA E400, E410, E460, E470, E480, E3170",
     "CL-57s Colour": "Genuine Canon CL-57S FINE cartridge (Colour, dye-based ink), small size\nApprox. 180 pages (A4 colour)\nFor PIXMA E400, E410, E460, E470, E480, E3170"
-   }
+   },
+   "br": "Canon"
   },
   "03-05": {
    "o": [
@@ -721,7 +709,8 @@
     "HP 680 Warna": "Original HP 680 Ink Advantage cartridge (Tri-colour)\nHP Thermal Inkjet, approx. 150 pages\nFor HP DeskJet Ink Advantage printers. Please check the compatible models printed on the box, or tell us your printer model",
     "HP 682 Hitam": "Original HP 682 Ink Advantage cartridge (Black)\nFor HP DeskJet Ink Advantage and DeskJet Plus Ink Advantage printers, e.g. DeskJet Ink Advantage 2335, 2776, DeskJet Plus Ink Advantage 6000 / 6400 series. Please check the compatible models on the box",
     "HP 682 Warna": "Original HP 682 Ink Advantage cartridge (Tri-colour)\nHP Thermal Inkjet, approx. 150 pages\nFor HP DeskJet Ink Advantage and DeskJet Plus Ink Advantage printers, e.g. DeskJet Ink Advantage 2335, 2776, DeskJet Plus Ink Advantage 6000 / 6400 series. Please check the compatible models on the box"
-   }
+   },
+   "br": "HP"
   },
   "03-06": {
    "o": [
@@ -736,9 +725,9 @@
     "BT5000 Magenta": "BT5000 Magenta",
     "BT-D60BK Hitam": "BT-D60BK Black"
    },
-   "at": 1,
-   "n": "Cartridge Brother",
-   "ne": "Brother Ink Cartridge",
+   "at": 1795862344710,
+   "n": "Dakwat Brother",
+   "ne": "Brother Ink Bottle",
    "oimg": {
     "BT-D60BK Hitam": "d673834b9079b21b1c3c4a012a1fbe72",
     "BT5000 Magenta": "080f9a786d882c43e6dfb7e44c104f53",
@@ -756,7 +745,8 @@
     "BT5000 Kuning": "Genuine Brother BT5000Y ink bottle (Yellow), 48.8 ml\nUltra high yield, approx. 5,000 pages\nFor Brother ink tank printers: DCP-T220, T310, T420W, T510W, T520W, T710W, T720DW, MFC-T910DW, T4500DW, HL-T4000DW",
     "BT5000 Magenta": "Genuine Brother BT5000M ink bottle (Magenta), 48.8 ml\nUltra high yield, approx. 5,000 pages\nFor Brother ink tank printers: DCP-T220, T310, T420W, T510W, T520W, T710W, T720DW, MFC-T910DW, T4500DW, HL-T4000DW",
     "BT-D60BK Hitam": "Genuine Brother BT-D60BK ink bottle (Black), 108 ml\nHigh yield black ink\nFor Brother ink tank printers: DCP-T220, T310, T420W, T510W, T520W, T710W, T720DW, MFC-T910DW, T4500DW, HL-T4000DW"
-   }
+   },
+   "br": "Brother"
   },
   "03-07": {
    "o": [
@@ -771,9 +761,9 @@
     "003 Magenta": "003 Magenta",
     "003 Hitam": "003 Black"
    },
-   "at": 1,
-   "n": "Cartridge Epson",
-   "ne": "Epson Ink Cartridge",
+   "at": 1795862344710,
+   "n": "Dakwat Epson",
+   "ne": "Epson Ink Bottle",
    "od": {
     "003 Cyan": "Botol dakwat Epson 003 tulen (Cyan), 65 ml\nKira-kira 7,500 halaman (warna)\nUntuk pencetak Epson EcoTank, cth. L1110, L3110, L3150, L3210, L3250, L5190",
     "003 Kuning": "Botol dakwat Epson 003 tulen (Kuning), 65 ml\nKira-kira 7,500 halaman (warna)\nUntuk pencetak Epson EcoTank, cth. L1110, L3110, L3150, L3210, L3250, L5190",
@@ -785,7 +775,52 @@
     "003 Kuning": "Genuine Epson 003 ink bottle (Yellow), 65 ml\nApprox. 7,500 pages (colour)\nFor Epson EcoTank printers, e.g. L1110, L3110, L3150, L3210, L3250, L5190",
     "003 Magenta": "Genuine Epson 003 ink bottle (Magenta), 65 ml\nApprox. 7,500 pages (colour)\nFor Epson EcoTank printers, e.g. L1110, L3110, L3150, L3210, L3250, L5190",
     "003 Hitam": "Genuine Epson 003 ink bottle (Black), 65 ml\nApprox. 4,500 pages (black)\nFor Epson EcoTank printers, e.g. L1110, L3110, L3150, L3210, L3250, L5190"
-   }
+   },
+   "br": "Epson"
+  },
+  "03-14": {
+   "n": "Dakwat Canon GI-790",
+   "ne": "Canon GI-790 Ink Bottle",
+   "o": [
+    "GI-790 Cyan",
+    "GI-790 Kuning",
+    "GI-790 Magenta",
+    "GI-790 Hitam"
+   ],
+   "oen": {
+    "GI-790 Cyan": "GI-790 Cyan",
+    "GI-790 Kuning": "GI-790 Yellow",
+    "GI-790 Magenta": "GI-790 Magenta",
+    "GI-790 Hitam": "GI-790 Black"
+   },
+   "at": 1795862344710,
+   "od": {
+    "GI-790 Cyan": "Botol dakwat Canon GI-790 tulen (Cyan), buatan Jepun\nUntuk pencetak tangki dakwat boleh isi semula PIXMA siri G\nKira-kira 7,000 halaman (warna A4)\nHujung botol tahan tumpah untuk pengisian yang lebih bersih\nUntuk PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
+    "GI-790 Kuning": "Botol dakwat Canon GI-790 tulen (Kuning), buatan Jepun\nUntuk pencetak tangki dakwat boleh isi semula PIXMA siri G\nKira-kira 7,000 halaman (warna A4)\nHujung botol tahan tumpah untuk pengisian yang lebih bersih\nUntuk PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
+    "GI-790 Magenta": "Botol dakwat Canon GI-790 tulen (Magenta), buatan Jepun\nUntuk pencetak tangki dakwat boleh isi semula PIXMA siri G\nKira-kira 7,000 halaman (warna A4)\nHujung botol tahan tumpah untuk pengisian yang lebih bersih\nUntuk PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
+    "GI-790 Hitam": "Botol dakwat Canon GI-790 tulen (Hitam), buatan Jepun\nUntuk pencetak tangki dakwat boleh isi semula PIXMA siri G\nKira-kira 6,000 halaman (A4)\nHujung botol tahan tumpah untuk pengisian yang lebih bersih\nUntuk PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010"
+   },
+   "ode": {
+    "GI-790 Cyan": "Genuine Canon GI-790 ink bottle (Cyan), Made in Japan\nFor PIXMA G-series refillable ink tank printers\nApprox. 7,000 pages (A4 colour)\nSpill-resistant bottle tip for cleaner refilling\nFor PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
+    "GI-790 Kuning": "Genuine Canon GI-790 ink bottle (Yellow), Made in Japan\nFor PIXMA G-series refillable ink tank printers\nApprox. 7,000 pages (A4 colour)\nSpill-resistant bottle tip for cleaner refilling\nFor PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
+    "GI-790 Magenta": "Genuine Canon GI-790 ink bottle (Magenta), Made in Japan\nFor PIXMA G-series refillable ink tank printers\nApprox. 7,000 pages (A4 colour)\nSpill-resistant bottle tip for cleaner refilling\nFor PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010",
+    "GI-790 Hitam": "Genuine Canon GI-790 ink bottle (Black), Made in Japan\nFor PIXMA G-series refillable ink tank printers\nApprox. 6,000 pages (A4)\nSpill-resistant bottle tip for cleaner refilling\nFor PIXMA G1000, G2000, G3000, G1010, G2010, G3010, G4010"
+   },
+   "oimg": {
+    "GI-790 Cyan": "0aea7ef8ea304a428b841aa3ec605f25",
+    "GI-790 Kuning": "f5334da6191da275d4d7f2e4679a65f7",
+    "GI-790 Magenta": "985d63880e9f4371688ab852f937132f",
+    "GI-790 Hitam": "b61ccd7c98f6679df0c47b41f7252f4c"
+   },
+   "br": "Canon"
+  },
+  "03-08": {
+   "n": "Cartridge OKI",
+   "br": "OKI",
+   "o": [
+    "Nyatakan model"
+   ],
+   "ne": "OKI Toner Cartridge"
   }
  },
  "newitems": {
@@ -850,6 +885,17 @@
    ],
    "cat": "bateri",
    "at": 1795850679077
+  },
+  "03-14": {
+   "n": "Dakwat Canon GI-790",
+   "o": [
+    "GI-790 Cyan",
+    "GI-790 Kuning",
+    "GI-790 Magenta",
+    "GI-790 Hitam"
+   ],
+   "cat": "bateri",
+   "at": 1795862344710
   }
  },
  "layout": {
@@ -901,6 +947,7 @@
      "03-12",
      "03-13",
      "03-04",
+     "03-14",
      "03-05",
      "03-06",
      "03-07",
@@ -1033,7 +1080,7 @@
     ]
    },
    "names": {},
-   "at": 1795593856630
+   "at": 1795593856631
   }
  }
 }
