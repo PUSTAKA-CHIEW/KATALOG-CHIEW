@@ -411,7 +411,8 @@
     "Energizer Max 2 biji": "9b8048d7cc52580b1cac5a3257f6a270",
     "Energizer Max 3+1 biji": "3dcc681730fadfa1d97f4e8c814f71df",
     "Eveready Gold 2 biji": "da601d933ab95b591e47df3fcb694c9c",
-    "Eveready Gold 4 biji (3+1)": "e396725d813d5e0b5c181d258c211981"
+    "Eveready Gold 4 biji (3+1)": "e396725d813d5e0b5c181d258c211981",
+    "Eveready Heavy Duty 4 biji": "49f39a21d5a768d81130f123cab448fa"
    },
    "oen": {
     "Energizer Max 2 biji": "Energizer Max 2 pcs",
@@ -449,7 +450,8 @@
    "ne": "AAA Batteries",
    "oimg": {
     "Energizer Max 2 biji": "094a6c5b78d8f6ea969bee8fba47c137",
-    "Energizer Max 3+1 biji": "75d92bb329bf387a86898f99a58e969f"
+    "Energizer Max 3+1 biji": "75d92bb329bf387a86898f99a58e969f",
+    "Eveready Heavy Duty 4 biji": "856158c46071bce4046471a8e489df59"
    },
    "oen": {
     "Energizer Max 2 biji": "Energizer Max 2 pcs",
@@ -553,18 +555,19 @@
    },
    "at": 1795851310262,
    "od": {
-    "Energizer 2016": "Bateri butang lithium 3V Energizer 3IN1 Child Shield (CR2016), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk alat kawalan jauh, peranti perubatan, sistem masuk tanpa kunci, mainan dan permainan.",
+    "Energizer 2016": "Bateri butang lithium 3V Energizer Ultimate Child Shield (CR2016), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk alat kawalan jauh, peranti perubatan, sistem masuk tanpa kunci, mainan dan permainan.",
     "Energizer 2025": "Bateri butang lithium 3V Energizer 3IN1 Child Shield (CR2025), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk alat kawalan jauh, peranti perubatan, sistem masuk tanpa kunci, mainan dan permainan.",
     "Energizer 2032": "Bateri butang lithium 3V Energizer 3IN1 Child Shield (CR2032), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk kalkulator, penimbang, alat kawalan jauh, tag pintar, sistem masuk tanpa kunci, peranti perubatan, mainan dan permainan."
    },
    "ode": {
-    "Energizer 2016": "Energizer 3IN1 Child Shield CR2016 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
+    "Energizer 2016": "Energizer Ultimate Child Shield CR2016 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
     "Energizer 2025": "Energizer 3IN1 Child Shield CR2025 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
     "Energizer 2032": "Energizer 3IN1 Child Shield CR2032 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For calculators, scales, remotes, smart tags, keyless entry systems, medical devices, toys and games."
    },
    "oimg": {
     "Energizer 2032": "5c25b77a03408f34cac4dd7e1ac8a26a",
-    "Energizer 2025": "61b61be777a7f2d9a5022d9cf73e564b"
+    "Energizer 2025": "61b61be777a7f2d9a5022d9cf73e564b",
+    "Energizer 2016": "a5997c7402e9a312768727bfc3861163"
    },
    "ob": {
     "Energizer 2016": "8888021301748",
@@ -628,6 +631,11 @@
     "Energizer Recharge PP AA 2 biji": "8888021301410",
     "Energizer Recharge PP AAA 2 biji": "8888021301502",
     "Energizer Recharge Base + AA": "8888021304275"
+   },
+   "oimg": {
+    "Energizer Recharge Base + AA": "3b5249c9790c301fdb73d5a311a25632",
+    "Energizer Recharge PP AA 2 biji": "7c4b4e99b0484aeec018d0e1b2fecab5",
+    "Energizer Recharge PP AAA 2 biji": "682057069bbc0bbe48d433c16d431305"
    }
   }
  },
