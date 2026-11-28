@@ -405,11 +405,12 @@
     "Eveready Gold 4 biji (3+1)",
     "Eveready Heavy Duty 4 biji"
    ],
-   "at": 1795851438725,
+   "at": 1795851605459,
    "ne": "AA Batteries",
    "oimg": {
     "Energizer Max 2 biji": "9b8048d7cc52580b1cac5a3257f6a270",
     "Energizer Max 3+1 biji": "3dcc681730fadfa1d97f4e8c814f71df",
+    "Eveready Gold 2 biji": "da601d933ab95b591e47df3fcb694c9c",
     "Eveready Gold 4 biji (3+1)": "e396725d813d5e0b5c181d258c211981"
    },
    "oen": {
