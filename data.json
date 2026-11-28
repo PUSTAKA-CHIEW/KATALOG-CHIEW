@@ -543,14 +543,14 @@
    },
    "at": 1795851310262,
    "od": {
-    "Energizer 2016": "Bateri butang lithium Energizer 2016. Menyimpan kuasa sehingga 10 tahun semasa disimpan. Beroperasi pada suhu -30°C hingga 60°C. Sesuai untuk jam tangan, kunci kereta, alat kawalan jauh, penggera, penimbang dan mainan. Tiada tambahan merkuri.",
-    "Energizer 2025": "Bateri butang lithium Energizer 2025. Menyimpan kuasa sehingga 10 tahun semasa disimpan. Beroperasi pada suhu -30°C hingga 60°C. Sesuai untuk jam tangan, kunci kereta, alat kawalan jauh, penggera, penimbang dan mainan. Tiada tambahan merkuri.",
-    "Energizer 2032": "Bateri butang lithium Energizer 2032. Menyimpan kuasa sehingga 10 tahun semasa disimpan. Beroperasi pada suhu -30°C hingga 60°C. Sesuai untuk jam tangan, kunci kereta, alat kawalan jauh, penggera, penimbang dan mainan. Tiada tambahan merkuri."
+    "Energizer 2016": "Bateri butang lithium 3V Energizer Ultimate Child Shield (CR2016), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk alat kawalan jauh, peranti perubatan, sistem masuk tanpa kunci, mainan dan permainan.",
+    "Energizer 2025": "Bateri butang lithium 3V Energizer Ultimate Child Shield (CR2025), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk alat kawalan jauh, peranti perubatan, sistem masuk tanpa kunci, mainan dan permainan.",
+    "Energizer 2032": "Bateri butang lithium 3V Energizer Ultimate Child Shield (CR2032), pek 2 biji. Perlindungan 3 dalam 1 untuk kanak-kanak: Colour Alert (mewarnakan mulut menjadi biru dalam beberapa saat jika terkena air liur), salutan pahit tidak toksik dan pembungkusan tahan kanak-kanak. Suhu beroperasi -20°C hingga 60°C. Sesuai untuk kalkulator, penimbang, alat kawalan jauh, tag pintar, sistem masuk tanpa kunci, peranti perubatan, mainan dan permainan."
    },
    "ode": {
-    "Energizer 2016": "Energizer 2016 lithium coin battery. Holds power for up to 10 years in storage. Operates from -30°C to 60°C. For watches, car key fobs, remotes, alarm sensors, scales and toys. Zero added mercury.",
-    "Energizer 2025": "Energizer 2025 lithium coin battery. Holds power for up to 10 years in storage. Operates from -30°C to 60°C. For watches, car key fobs, remotes, alarm sensors, scales and toys. Zero added mercury.",
-    "Energizer 2032": "Energizer 2032 lithium coin battery. Holds power for up to 10 years in storage. Operates from -30°C to 60°C. For watches, car key fobs, remotes, alarm sensors, scales and toys. Zero added mercury."
+    "Energizer 2016": "Energizer Ultimate Child Shield CR2016 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
+    "Energizer 2025": "Energizer Ultimate Child Shield CR2025 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For remote controls, medical devices, keyless entry systems, toys and games.",
+    "Energizer 2032": "Energizer Ultimate Child Shield CR2032 3V lithium coin battery, pack of 2. 3-in-1 child protection: Colour Alert (turns the mouth blue within seconds of contact with saliva), a non-toxic bitter coating and child-resistant packaging. Operating range -20°C to 60°C. For calculators, scales, remotes, smart tags, keyless entry systems, medical devices, toys and games."
    }
   },
   "03-12": {
@@ -577,7 +577,13 @@
     "Energizer Recharge Power Plus": "Energizer Recharge Power Plus",
     "Energizer Recharge + Pengecas": "Energizer Recharge + Charger"
    },
-   "at": 1795851310262
+   "at": 1795851310262,
+   "od": {
+    "Energizer Recharge Power Plus": "Bateri boleh cas semula Energizer Recharge Power Plus, tersedia dalam AA dan AAA. Tahan sehingga 4x lebih lama berbanding bateri alkaline biasa dalam kamera digital (hasil berbeza mengikut peranti). Boleh dicas semula beratus kali dan mengekalkan cas sehingga 1 tahun semasa disimpan. Dibuat dengan 22% bahan kitar semula. Sila nyatakan AA atau AAA dalam catatan semasa memesan."
+   },
+   "ode": {
+    "Energizer Recharge Power Plus": "Energizer Recharge Power Plus rechargeable batteries, available in AA and AAA. Lasts up to 4x longer than basic alkaline in digital cameras (results vary by device). Can be recharged hundreds of times and holds its charge for up to 1 year in storage. Made with 22% recycled materials. Please state AA or AAA in the note when ordering."
+   }
   }
  },
  "newitems": {
