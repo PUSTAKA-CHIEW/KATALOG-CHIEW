@@ -420,15 +420,11 @@
     "Eveready Heavy Duty 4 biji": "Eveready Heavy Duty 4 pcs (3+1)"
    },
    "od": {
-    "Energizer Max 2 biji": "Bateri alkaline Energizer Max, tahan lama. Sesuai untuk jam, alat kawalan jauh, kamera dan peralatan harian.",
-    "Energizer Max 3+1 biji": "Bateri alkaline Energizer Max, tahan lama. Sesuai untuk jam, alat kawalan jauh, kamera dan peralatan harian. Pek 4 biji (percuma 1 biji).",
-    "Eveready Gold 2 biji": "Bateri alkaline Eveready Gold. Tahan lama, sesuai untuk peralatan harian.",
     "Eveready Gold 4 biji (3+1)": "4 pek bateri AA EVEREADY GOLD®\nTahan sehingga 10x lebih lama*\nBateri EVEREADY GOLD® memberikan kuasa kepada peranti harian anda seperti jam, radio dan mainan\nEVEREADY GOLD® sedia digunakan sehingga 12 tahun semasa disimpan\nPastikan peranti anda selamat dengan Meterai Kualiti kami untuk Kuasa Diperca"
    },
    "ode": {
     "Energizer Max 2 biji": "2/4-pack of Energizer Max AA batteries, Alkaline\nLongest Lasting: Up to 12x longer lasting than vs. carbon zinc based on ANSI Grooming test.\nTrusted Power: AA batteries for cameras, doorbells, controllers, clocks and more of your everyday devices\nLeak Protection: AA batteries with leak-resistant con",
     "Energizer Max 3+1 biji": "2/4-pack of Energizer Max AA batteries, Alkaline\nLongest Lasting: Up to 12x longer lasting than vs. carbon zinc based on ANSI Grooming test.\nTrusted Power: AA batteries for cameras, doorbells, controllers, clocks and more of your everyday devices\nLeak Protection: AA batteries with leak-resistant con",
-    "Eveready Gold 2 biji": "Eveready Gold alkaline battery. Long lasting, suitable for everyday devices.",
     "Eveready Gold 4 biji (3+1)": "4 pack of EVEREADY GOLD® AA batteries\nLasts up to 10x longer*\nEVEREADY GOLD® batteries power your everyday devices like clocks, radios, and toys\nEVEREADY GOLD® is ready to use for up to 12 years in storage\nKeeps your devices safe with our Quality Seal for Trusted Power.\nEVEREADY GOLD® batteries have"
    }
   },
@@ -448,19 +444,9 @@
     "Eveready Gold 4 biji (3+1)": "Eveready Gold 4 pcs (3+1)",
     "Eveready Heavy Duty 4 biji": "Eveready Heavy Duty 4 pcs (3+1)"
    },
-   "od": {
-    "Energizer Max 2 biji": "Bateri alkaline Energizer Max, tahan lama. Sesuai untuk jam, alat kawalan jauh, kamera dan peralatan harian.",
-    "Energizer Max 3+1 biji": "Bateri alkaline Energizer Max, tahan lama. Sesuai untuk jam, alat kawalan jauh, kamera dan peralatan harian. Pek 4 biji (percuma 1 biji).",
-    "Eveready Gold 2 biji": "Bateri alkaline Eveready Gold. Tahan lama, sesuai untuk peralatan harian.",
-    "Eveready Gold 4 biji (3+1)": "Bateri alkaline Eveready Gold. Tahan lama, sesuai untuk peralatan harian. Pek 4 biji (beli 3 percuma 1).",
-    "Eveready Heavy Duty 4 biji": "Bateri karbon zink Eveready Super Heavy Duty. Harga jimat, sesuai untuk jam dan alat kawalan jauh. Pek 4 biji (3+1 percuma)."
-   },
    "ode": {
     "Energizer Max 2 biji": "2/4-pack of Energizer Max AAA batteries, Alkaline\nLongest Lasting: Up to 3x longer lasting than an Energizer basic alkaline battery in digital cameras\nTrusted Power: AAA batteries for cameras, doorbells, controllers, clocks and more of your everyday devices\nLeak Protection: AAA batteries with leak-r",
-    "Energizer Max 3+1 biji": "2/4-pack of Energizer Max AAA batteries, Alkaline\nLongest Lasting: Up to 3x longer lasting than an Energizer basic alkaline battery in digital cameras\nTrusted Power: AAA batteries for cameras, doorbells, controllers, clocks and more of your everyday devices\nLeak Protection: AAA batteries with leak-r",
-    "Eveready Gold 2 biji": "Eveready Gold alkaline battery. Long lasting, suitable for everyday devices.",
-    "Eveready Gold 4 biji (3+1)": "Eveready Gold alkaline battery. Long lasting, suitable for everyday devices. Pack of 4 (buy 3 get 1 free).",
-    "Eveready Heavy Duty 4 biji": "Eveready Super Heavy Duty carbon zinc battery. Economical, suitable for clocks and remotes. Pack of 4 (3+1 free)."
+    "Energizer Max 3+1 biji": "2/4-pack of Energizer Max AAA batteries, Alkaline\nLongest Lasting: Up to 3x longer lasting than an Energizer basic alkaline battery in digital cameras\nTrusted Power: AAA batteries for cameras, doorbells, controllers, clocks and more of your everyday devices\nLeak Protection: AAA batteries with leak-r"
    },
    "at": 1795850679073,
    "oimg": {
@@ -477,12 +463,6 @@
    "oen": {
     "Eveready Heavy Duty 2 biji": "Eveready Heavy Duty 2 pcs"
    },
-   "od": {
-    "Eveready Heavy Duty 2 biji": "Bateri karbon zink Eveready Super Heavy Duty. Harga jimat, sesuai untuk jam dan alat kawalan jauh. Pek 2 biji."
-   },
-   "ode": {
-    "Eveready Heavy Duty 2 biji": "Eveready Super Heavy Duty carbon zinc battery. Economical, suitable for clocks and remotes. Pack of 2."
-   },
    "at": 1795850679073,
    "ne": "C Batteries"
   },
@@ -494,14 +474,62 @@
    "oen": {
     "Eveready Heavy Duty 2 biji": "Eveready Heavy Duty 2 pcs"
    },
-   "od": {
-    "Eveready Heavy Duty 2 biji": "Bateri karbon zink Eveready Super Heavy Duty. Harga jimat, sesuai untuk jam dan alat kawalan jauh. Pek 2 biji."
-   },
-   "ode": {
-    "Eveready Heavy Duty 2 biji": "Eveready Super Heavy Duty carbon zinc battery. Economical, suitable for clocks and remotes. Pack of 2."
-   },
    "at": 1795850679073,
    "ne": "D Batteries"
+  },
+  "03-10": {
+   "n": "Bateri 9V",
+   "ne": "9V Batteries",
+   "o": [
+    "Energizer 9V",
+    "Eveready Heavy Duty 9V"
+   ],
+   "oen": {
+    "Energizer 9V": "Energizer 9V",
+    "Eveready Heavy Duty 9V": "Eveready Heavy Duty 9V"
+   },
+   "at": 1795851310262
+  },
+  "03-11": {
+   "n": "Bateri Butang",
+   "ne": "Button Cell Batteries",
+   "o": [
+    "Energizer 2016",
+    "Energizer 2025",
+    "Energizer 2032"
+   ],
+   "oen": {
+    "Energizer 2016": "Energizer 2016",
+    "Energizer 2025": "Energizer 2025",
+    "Energizer 2032": "Energizer 2032"
+   },
+   "at": 1795851310262
+  },
+  "03-12": {
+   "n": "Bateri A23 / A27",
+   "ne": "A23 / A27 Batteries",
+   "o": [
+    "Energizer A23",
+    "Energizer A27"
+   ],
+   "oen": {
+    "Energizer A23": "Energizer A23",
+    "Energizer A27": "Energizer A27"
+   },
+   "at": 1795851310262
+  },
+  "03-13": {
+   "n": "Bateri Boleh Cas",
+   "ne": "Rechargeable Batteries",
+   "o": [
+    "Energizer Recharge Power Plus",
+    "Energizer Recharge + Pengecas"
+   ],
+   "oen": {
+    "Energizer Recharge Power Plus": "Energizer Recharge Power Plus",
+    "Energizer Recharge + Pengecas": "Energizer Recharge + Charger"
+   },
+   "at": 1795851310262
   }
  },
  "newitems": {
